@@ -17,7 +17,7 @@ public class Task_1_1_res {
              check = 1;
      
                   try {
-                	      x = Integer.parseInt(xx);
+                	   x = Integer.parseInt(xx);
                       } 
                         catch (NumberFormatException e) {
                         
