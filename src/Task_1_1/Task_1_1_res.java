@@ -12,12 +12,12 @@ public class Task_1_1_res {
 	      do {
 		       Scanner scanner = new Scanner(System.in);
 		       System.out.print("Введите Данные :.............:" + "  ");
-             String xx = scanner.nextLine();
+               String xx = scanner.nextLine();
  
-             check = 1;
+               check = 1;
      
                   try {
-                	   x = Integer.parseInt(xx);
+                	    x = Integer.parseInt(xx);
                       } 
                         catch (NumberFormatException e) {
                         
@@ -27,7 +27,7 @@ public class Task_1_1_res {
      	                System.out.println("------------------------------------------");
                       }
                   
-            System.out.println("------------------------------");
+            System.out.println("----------------------------------");
  
      } while ( check == 0 );
 		    return x; 
