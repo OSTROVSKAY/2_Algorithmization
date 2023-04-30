@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Task_1_4_res {
 	
-	
  // Ввод данных
 	
 	public int InputInt() {
