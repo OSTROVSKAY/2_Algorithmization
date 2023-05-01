@@ -34,8 +34,4 @@ public class Task_1_6_res {
 		    } while ( check == 0 );
 				     return x; 
 		  }
-	
-	
-	
-
 }
