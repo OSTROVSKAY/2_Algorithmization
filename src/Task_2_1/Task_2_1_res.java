@@ -12,8 +12,9 @@ public class Task_2_1_res {
 	      int check = 1;
 		  int x = 0;
 			     
+		  Scanner scanner = new Scanner(System.in);
+		  
 			 do {
-				  Scanner scanner = new Scanner(System.in);
 				  System.out.print("Введите Данные :.............:" + "  ");
 		          String xx = scanner.nextLine();
 
