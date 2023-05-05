@@ -1,9 +1,9 @@
 
-package Task_2_1;
+package Task_2_2;
 
 import java.util.Scanner;
 
-public class Task_2_1_res {
+public class Task_2_2_res {
 	
 	// Ввод данных
 	
@@ -36,5 +36,4 @@ public class Task_2_1_res {
 		    } while ( check == 0 );
 				     return x; 
 		 }
-
 }

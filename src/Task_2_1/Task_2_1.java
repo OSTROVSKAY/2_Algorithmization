@@ -60,6 +60,7 @@ public class Task_2_1 {
 		// Объявление двумерного массива
 		  int[][] array = new int[X][Y];
 		  
+	   // Заполнение двумерного массива рандомно	  
 		  for (int i = 0; i < X; i++) {
 		        for (int j = 0; j < Y; j++) {
 		            array[i][j] = -100 + (int) ( Math.random()*(100-(-100)) );
