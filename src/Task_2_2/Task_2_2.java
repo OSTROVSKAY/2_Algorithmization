@@ -59,7 +59,9 @@ public class Task_2_2 {
 		  System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		  for (int i = 0; i < array.length; i++) {  // X - Число строк
 				for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
-					System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+					
+					System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
+				  //System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
 				System.out.println();
 		   	} 
@@ -74,7 +76,10 @@ public class Task_2_2 {
 				for (int j = 0; j < Y; j++) {  // Y - Число столбцов
 					
 					if ( i == j ) {
-					System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+						
+				    System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );	
+					//System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+					
 					}
 					else { System.out.print("               " + "\t"); }
 				}
@@ -96,7 +101,10 @@ public class Task_2_2 {
 				for (int j = 0; j < Y; j++) {  // Y - Число столбцов
 					
 					if ( j == Z ) {
-					System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+						
+				    System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
+				   //System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+					
 					}
 					else { System.out.print("               " + "\t"); }
 					
