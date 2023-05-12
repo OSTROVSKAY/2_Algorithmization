@@ -20,7 +20,7 @@ public class Task_1_6_res {
 		          check = 1;
 
 		            try {
-		          	    x = Integer.parseInt(xx);
+		          	      x = Integer.parseInt(xx);
 		                } 
 		                  catch (NumberFormatException e) {
 		                  
