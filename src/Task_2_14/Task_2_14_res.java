@@ -8,33 +8,33 @@ public class Task_2_14_res {
 	// Ввод данных
 	public int InputInt() {
 				  
-			      int check = 1;
-				  int x = 0;
+	    int check = 1;
+		int x = 0;
 					     
-				  Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 				  
-					 do {
-						  System.out.print("Введите Данные :.............: " + "  ");
-				          String xx = scanner.nextLine();
+		do {
+			 System.out.print("Введите Данные :.............: " + "  ");
+		     String xx = scanner.nextLine();
 
-				          check = 1;
+			 check = 1;
 
-				            try {
-				          	      x = Integer.parseInt(xx);
-				                } 
-				                  catch (NumberFormatException e) {
+		     try {
+				   x = Integer.parseInt(xx);
+				 } 
+				   catch (NumberFormatException e) {
 				                  
-				   	            check = 0;
-					                System.out.println("------------------------------------------");
-					                System.out.println("Данные введены не правильно. Введите снова");
-					                System.out.println("------------------------------------------");
-				                }
+				   check = 0;
+				   System.out.println("------------------------------------------");
+				   System.out.println("Данные введены не правильно. Введите снова");
+				   System.out.println("------------------------------------------");
+				    }
 				            
 				      System.out.println("----------------------------------");
 
 				    } while ( check == 0 );
 						     return x; 
-		 }
+		}
 	
 	
 	// Заполнение двумерного массива. Массив заполняется НУЛЯМИ и ЕДИНИЦАМИ
