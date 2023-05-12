@@ -78,9 +78,9 @@ public class Task_2_7 {
 			  
 				for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
 					
-					System.out.print(array[i][j] + "\t");
-					
-					// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+					System.out.printf( " %6.3f   ",array[i][j] );
+				  //System.out.print(array[i][j] + "\t");
+				  //System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
 				System.out.println();
 		   	} 
