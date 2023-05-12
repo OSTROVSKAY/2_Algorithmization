@@ -15,20 +15,20 @@ public class Task_1_4_res {
 	      Scanner scanner = new Scanner(System.in);
 	     
 	      do {
-		       System.out.print("Введите Данные :.............:" + "  ");
+		       System.out.print("Введите Данные :.............: " + "  ");
                String xx = scanner.nextLine();
 
                check = 1;
 
             try {
-          	     x = Integer.parseInt(xx);
+          	      x = Integer.parseInt(xx);
                 } 
                   catch (NumberFormatException e) {
                   
-   	            check = 0;
-	                System.out.println("------------------------------------------");
-	                System.out.println("Данные введены не правильно. Введите снова");
-	                System.out.println("------------------------------------------");
+   	             check = 0;
+	             System.out.println("------------------------------------------");
+	             System.out.println("Данные введены не правильно. Введите снова");
+	             System.out.println("------------------------------------------");
                 }
             
       System.out.println("----------------------------------");
