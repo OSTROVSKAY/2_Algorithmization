@@ -76,7 +76,9 @@ public class Task_2_9 {
 		    System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		     for (int i = 0; i < array.length; i++) {  // X - Число строк
 				for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
-					System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
+					
+					System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
+				   //System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
 				System.out.println();
 		   	} 
@@ -106,7 +108,8 @@ public class Task_2_9 {
 		                   	} 
 		    
 		    // System.out.println("Номер столбца : " + z + "  ||  " + "Значение суммы элементов столбца : " +  sum);
-		       System.out.print (z + "  :  " + sum + "       " );
+		       System.out.printf( " %3d :   %4d  ",z,sum);
+		    // System.out.print (z + "  :  " + sum + "       " );
 		       nums.add(sum);
 		       sum = 0;
 		    
