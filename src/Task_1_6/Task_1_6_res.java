@@ -14,7 +14,7 @@ public class Task_1_6_res {
 		  Scanner scanner = new Scanner(System.in);
 			     
 			 do {
-				  System.out.print("Введите Данные :.............:" + "  ");
+				  System.out.print("Введите Данные :.............: " + "  ");
 		          String xx = scanner.nextLine();
 
 		          check = 1;
