@@ -77,12 +77,12 @@ public class Task_1_6 {
 	         int count = 0; // Количество делителей числа
 	         double sum = 0; // Сумма элементов первоначального массива, порядковые номера элементов которого являются простыми числами
 	         
-	         for ( double i = 1; i <= nums.length; i++ ) {
+	         for ( double i = 0; i < nums.length; i++ ) {
 	        	
 	        	 count = 0;
-	        	 for ( double j = 1; j <= i; j++) {
+	        	 for ( double j = 1; j <= (i + 1); j++) {
 	        		 
-	        		 if ( (i % j) == 0 ) {
+	        		 if ( ( (i + 1) % j) == 0 ) {
 	        			 count ++;
 	        		 }
 	        	 }
