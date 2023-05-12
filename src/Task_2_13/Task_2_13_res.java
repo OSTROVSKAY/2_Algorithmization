@@ -55,9 +55,9 @@ public class Task_2_13_res {
 					  
 					for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
 							
-						//System.out.print(array[i][j] + "\t");
-							
-						System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t" );
+						System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
+					 // System.out.print(array[i][j] + "\t");
+					 // System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t" );
 					}
 					System.out.println();
 				   } 
