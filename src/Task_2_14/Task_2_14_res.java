@@ -135,17 +135,17 @@ public class Task_2_14_res {
 	// Вывод двумерного массива на печать
 	public void PrintMass( int[][] array ) { 
 				
-				for (int i = 0; i < array.length; i++) {  // X - Число строк
+		for (int i = 0; i < array.length; i++) {  // X - Число строк
 						  
-						for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
+			 for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
 								
-							System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
+			       System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
 							
-						 // System.out.print(array[i][j] + "\t");
-						 // System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t" );
+				// System.out.print(array[i][j] + "\t");
+				// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t" );
 						}
-						System.out.println();
-					   } 
-	     }
+				   System.out.println();
+		    } 
+	 }
 	
 }
