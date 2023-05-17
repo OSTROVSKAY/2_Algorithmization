@@ -83,7 +83,7 @@ public class Task_1_1 {
 		System.out.println("Элементы массива, которые кратны K. K равно :  " + K);
 		
 		int sum = 0;
-			
+		
 		for ( int i = 0; i < nums.length; i++) {
 			if ( (nums[i] % K) == 0 ) {
 				
