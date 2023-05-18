@@ -32,8 +32,8 @@ public class Task_2_15_res {
 			System.out.println("----------------------------------");
 			
 		} while ( check == 0 );
-				return x;
-			}
+			return x;
+	}
 		
 		
 		// Заполнение двумерного массива
