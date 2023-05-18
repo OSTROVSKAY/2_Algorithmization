@@ -57,7 +57,7 @@ public class Task_2_6 {
 			// Объявление двумерного массива
 			int[][] array = new int[X][Y];
 			
-			// Заполнение двумерного массива 
+			// Заполнение двумерного массива
 			
 			for (int i = 0; i < X ; i++) {
 				
@@ -73,9 +73,9 @@ public class Task_2_6 {
 							array[i][j] = 1;
 						}
 						
-					}  else  if ( i > ( X/2 - 1 ) ) { 
+					}  else  if ( i > ( X/2 - 1 ) ) {
 						
-						if ( (j -1) > ( i -1) | j < (YY - 1 - i) ) { 
+						if ( (j -1) > ( i -1) | j < (YY - 1 - i) ) {
 							
 							array[i][j] = 0;
 							
@@ -110,7 +110,7 @@ public class Task_2_6 {
 				System.out.println("ПРОДОЛЖИТЬ РАБОТУ ПРОГРАММЫ ?   1 - ДА. 0 - НЕТ");
 				System.out.println("-----------------------------------------------");
 				
-				do	{
+				do {
 					System.out.println("Введите : 1 - Да или 0 - Нет");
 					System.out.println("----------------------------");
 					
@@ -128,7 +128,7 @@ public class Task_2_6 {
 				try {
 					Thread.sleep(1500);
 					}
-						catch(InterruptedException ex) 
+						catch(InterruptedException ex)
 							{
 							System.out.println("-------------------------");
 							System.out.println("Ошибка в работе программы");
