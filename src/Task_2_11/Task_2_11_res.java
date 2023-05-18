@@ -1,8 +1,8 @@
 	
 package Task_2_11;
-
+	
 import java.util.Scanner;
-
+	
 public class Task_2_11_res {
 	
 	// Заполнение двумерного массива
@@ -12,7 +12,7 @@ public class Task_2_11_res {
 			for (int j = 0; j < Y; j++) {
 				array[i][j] = 0 + (int) ( Math.random()*(15-0) );
 			}
-		} 
+		}
 	}
 	
 	
@@ -28,7 +28,7 @@ public class Task_2_11_res {
 				// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t" );
 				}
 				System.out.println();
-			} 
+			}
 	}
 	
 	
@@ -48,19 +48,19 @@ public class Task_2_11_res {
 					}
 				}
 				
-					if ( count >= 3 ) { 
-						
-						count1 = count1 + 1;
-						
-						// System.out.print("Номер строки : " + (i + 1) + "  ||  " + "Количество встреч числа 5 в строке : " + count + "  ||  " + "Значение элементов в строке массива : " + "   ");
-						System.out.printf("Номер строки : %3d  ||  Количество встреч числа 5 в строке : %3d  ||  Значение элементов в строке массива : ", (i + 1), count );
-						
-						for (int j = 0; j < array[i].length; j++) { // Y - Число столбцов
-							System.out.printf(" %3d   ",array[i][j]);
-							
-							}
-						System.out.println("");
+			if ( count >= 3 ) {
+				
+			count1 = count1 + 1;
+				
+			// System.out.print("Номер строки : " + (i + 1) + "  ||  " + "Количество встреч числа 5 в строке : " + count + "  ||  " + "Значение элементов в строке массива : " + "   ");
+			System.out.printf("Номер строки : %3d  ||  Количество встреч числа 5 в строке : %3d  ||  Значение элементов в строке массива : ", (i + 1), count );
+				
+			for (int j = 0; j < array[i].length; j++) { // Y - Число столбцов
+				System.out.printf(" %3d   ",array[i][j]);
+					
 					}
+					System.out.println("");
+				}
 				count = 0;
 			}
 		
@@ -80,27 +80,27 @@ public class Task_2_11_res {
 		
 		Scanner scanner = new Scanner(System.in);
 		
-			do {
-				System.out.print("Введите Данные :.............: " + "  ");
-				String xx = scanner.nextLine();
-				
-				check = 1;
-				
-				try {
-						x = Integer.parseInt(xx);
-					}
-						catch (NumberFormatException e) {
-							
-							check = 0;
-							System.out.println("------------------------------------------");
-							System.out.println("Данные введены не правильно. Введите снова");
-							System.out.println("------------------------------------------");
-						}
+		do {
+			System.out.print("Введите Данные :.............: " + "  ");
+			String xx = scanner.nextLine();
+			
+			check = 1;
+			
+			try {
+				x = Integer.parseInt(xx);
+				}
+				catch (NumberFormatException e) {
 					
-					System.out.println("----------------------------------");
+				check = 0;
+				System.out.println("------------------------------------------");
+				System.out.println("Данные введены не правильно. Введите снова");
+				System.out.println("------------------------------------------");
+				}
 					
-					} while ( check == 0 );
-					return x; 
+				System.out.println("----------------------------------");
+				
+			} while ( check == 0 );
+				return x;
 		}
 		
 	}

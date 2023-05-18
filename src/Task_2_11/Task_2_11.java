@@ -56,29 +56,29 @@ public class Task_2_11 {
 			System.out.println("ПРОДОЛЖИТЬ РАБОТУ ПРОГРАММЫ ?   1 - ДА. 0 - НЕТ");
 			System.out.println("-----------------------------------------------");
 			
-			do	{
+			do {
 				System.out.println("Введите : 1 - Да или 0 - Нет");
 				System.out.println("----------------------------");
 				
 				check = object1.InputInt();
 				
-				if ( check < 0 | check > 1 ) 
+				if ( check < 0 | check > 1 )
 					{
-						System.out.println("------------------------------------------------");
-						System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
-						System.out.println("------------------------------------------------");
+					System.out.println("------------------------------------------------");
+					System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
+					System.out.println("------------------------------------------------");
 					}
 				
 			} while ( check < 0 | check > 1 );
 			
 			try {
-					Thread.sleep(1500);
+				Thread.sleep(1500);
 				}
-					catch(InterruptedException ex) 
+				catch(InterruptedException ex)
 						{
-							System.out.println("-------------------------");
-							System.out.println("Ошибка в работе программы");
-							System.out.println("-------------------------");
+						System.out.println("-------------------------");
+						System.out.println("Ошибка в работе программы");
+						System.out.println("-------------------------");
 						}
 		
 		} while ( check == 1 );
