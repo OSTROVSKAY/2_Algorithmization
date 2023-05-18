@@ -21,7 +21,7 @@ public class Task_2_7_res {
 				check = 1;
 				
 				try {
-						x = Integer.parseInt(xx);
+					x = Integer.parseInt(xx);
 					}
 						catch (NumberFormatException e) {
 							
@@ -34,7 +34,7 @@ public class Task_2_7_res {
 					System.out.println("----------------------------------");
 					
 					} while ( check == 0 );
-					return x; 
+					return x;
 		}
 		
 		

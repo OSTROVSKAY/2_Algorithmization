@@ -1,16 +1,16 @@
-
+	
 /*
 	7. Сформировать квадратную матрицу порядка N по правилу.
 		и подсчитать количество положительных элементов в ней.
 */
-
+	
 package Task_2_7;
-
+	
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
+	
 public class Task_2_7 {
-
+	
 	public static void main(String[] args) {
 		
 		System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ КВАДРАТНОЙ МАТРИЦЫ");
@@ -65,8 +65,8 @@ public class Task_2_7 {
 						result = result.setScale(3, RoundingMode.DOWN );
 						array[i][j] = result.doubleValue();
 					}
-				} 
-		
+				}
+				
 			// Вывод двумерного массива на печать
 				
 			System.out.println("------------------------------------");
@@ -84,7 +84,7 @@ public class Task_2_7 {
 					// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
 				System.out.println();
-			} 
+			}
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 			
 			
@@ -110,30 +110,30 @@ public class Task_2_7 {
 				System.out.println("ПРОДОЛЖИТЬ РАБОТУ ПРОГРАММЫ ?   1 - ДА. 0 - НЕТ");
 				System.out.println("-----------------------------------------------");
 				
-				do	{
+				do {
 					System.out.println("Введите : 1 - Да или 0 - Нет");
 					System.out.println("----------------------------");
 					
 					check = Inp.InputInt();
 					
-					if ( check < 0 | check > 1 ) 
+					if ( check < 0 | check > 1 )
 						{
-							System.out.println("------------------------------------------------");
-							System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
-							System.out.println("------------------------------------------------");
+						System.out.println("------------------------------------------------");
+						System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
+						System.out.println("------------------------------------------------");
 						}
 					
 				} while ( check < 0 | check > 1 );
 				
 				try {
-						Thread.sleep(1500);
+					Thread.sleep(1500);
 					}
-						catch(InterruptedException ex) 
-							{
-								System.out.println("-------------------------");
-								System.out.println("Ошибка в работе программы");
-								System.out.println("-------------------------");
-							}
+					catch(InterruptedException ex)
+						{
+						System.out.println("-------------------------");
+						System.out.println("Ошибка в работе программы");
+						System.out.println("-------------------------");
+						}
 				
 			} while ( check == 1 );
 			
