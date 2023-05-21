@@ -42,7 +42,7 @@ public class Task_3_1 {
 		
 		A = Inp.WriteMass(A, X);
 		
-		Inp.PrintMass(A);
+		//Inp.PrintMass(A);
 	
 	
 	}
