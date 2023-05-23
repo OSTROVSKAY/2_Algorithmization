@@ -1,16 +1,13 @@
 	
-package Task_3_2;
+package Task_3_6;
 	
 import java.math.BigDecimal;
-	
 import java.math.RoundingMode;
-	
 import java.util.Scanner;
 	
-public class Task_3_2_res {
+public class Task_3_6_res {
 	
 	// Ввод данных
-	
 	public int InputInt() {
 		
 		int check = 1;
@@ -23,55 +20,54 @@ public class Task_3_2_res {
 			String xx = scanner.nextLine();
 			
 			check = 1;
-			
-			try {
-				x = Integer.parseInt(xx);
-				}
-				catch (NumberFormatException e) {
 				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
+				try {
+					x = Integer.parseInt(xx);
+					}
+					catch (NumberFormatException e) {
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
 				}
 				
 				System.out.println("----------------------------------");
 				
 			} while ( check == 0 );
-				return x;
+			return x;
 		}
-	
-	
+		
+		
 	// Заполнение одномерного массива рандомно
 	public static double[] WriteMass ( double[] array, int X ) {
-		
+			
 		double value = 0;
-		
-		value = -10 + ( Math.random() * (10 - (-10) ) );
-		BigDecimal result = new BigDecimal(value);
-		result = result.setScale(3, RoundingMode.UP );
-		
-		array[0] = result.doubleValue();
-		
-		// Заполнение массива рандомно
-		value = 0;
-		
-		for ( int i = 1; i < X; i++ ) {
 			
-			do {
-				value = -10 + ( Math.random() * (10 - (-10) ) );
-				BigDecimal result1 = new BigDecimal(value);
-				result1 = result1.setScale(3, RoundingMode.UP );
-				
-				array[i] = result1.doubleValue();
-				
-			} while ( array[i-1] > array[i] );
+			value = -10 + ( Math.random() * (10 - (-10) ) );
+			BigDecimal result = new BigDecimal(value);
+			result = result.setScale(3, RoundingMode.UP );
 			
+			
+			
+			// Заполнение массива рандомно
+			value = 0;
+			
+			for ( int i = 0; i < X; i++ ) {
+				
+				do {
+					value = -10 + ( Math.random() * (10 - (-10) ) );
+					BigDecimal result1 = new BigDecimal(value);
+					result = result1.setScale(3, RoundingMode.UP );
+					
+					array[i] = result1.doubleValue();
+					
+				} while ( array[i-1] > array[i] );
+				
+			}
+			
+			return array;
 		}
-		
-		return array;
-	}
-	
 	
 	// Вывод на печать одномерного массива
 	public void PrintMass (double[] array) {
@@ -83,7 +79,7 @@ public class Task_3_2_res {
 			System.out.printf( "(%d)  ", i);
 			
 			}
-			
+				
 		System.out.println("");
 		System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		}
