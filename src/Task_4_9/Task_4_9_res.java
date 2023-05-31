@@ -56,7 +56,7 @@ public class Task_4_9_res {
 	}
 	
 	
-	// Площадь трапеции ( S ) равна произведению полусуммы оснований ( A, B ) на высоту ( H )
+	// Площадь трапеции ( S ) равна произведению полусуммы оснований ( A, B ) на высоту ( H ). Трапеция - прямоугольная
 	public double Sq_rec_trap( double A, double B, double H) {
 		
 		double S = 0.5 * ( A + B ) * H;
@@ -64,5 +64,58 @@ public class Task_4_9_res {
 		return S;
 	}
 	
+	
+	// Площадь четырёхугольника : В четырёхугольнике один угол прямой
+	public double quadrilateral (double X, double Y, double Z, double T) {
+		
+		double S1 = 0.5 * X * Y;
+		
+		System.out.println("--------------------------------------");
+		
+		System.out.printf("Площадь ПЕРВОГО треугольника : %6.3f%n", S1 );
+		//System.out.println("Площадь ПЕРВОГО треугольника : " + S1);
+		System.out.println("--------------------------------------");
+		
+		double hyp = Math.sqrt ( ( X * X ) + ( Y * Y ) );
+		
+		double aa = Math.toDegrees ( Math.acos ( ( Z*Z + hyp*hyp - T*T ) / ( 2 * Z * hyp ) ) );
+		
+		double bb = Math.toDegrees ( Math.acos ( ( T*T + hyp*hyp - Z*Z ) / ( 2 * T * hyp ) ) );
+		
+		double yy = Math.toDegrees ( Math.acos ( ( T*T + Z*Z - hyp*hyp ) / ( 2 * T * Z ) ) );
+		
+		double Sum_angl = aa + bb + yy;
+		
+		System.out.println("------------------------------------------------------------------------");
+		
+		System.out.printf("Сумма углов во ВТОРОМ треугольнике : %6.3f = %6.3f + %6.3f + %6.3f%n", Sum_angl, aa, bb, yy );
+		// System.out.println("Сумма углов во ВТОРОМ треугольнике : " + Sum_angl + "  " + aa + "  " + bb + "  " + yy);
+		System.out.println("------------------------------------------------------------------------");
+		
+		double S2_1 = 0.5 * Z * T * Math.sin ( Math.toRadians ( yy ) );
+		
+		double S2_2 = 0.5 * Z * hyp * Math.sin ( Math.toRadians( aa) );
+		
+		double S2_3 = 0.5 * hyp * T * Math.sin ( Math.toRadians( bb ) );
+		
+		System.out.println("-------------------------------------------------------");
+		
+		System.out.printf("Площадь ВТОРОГО треугольника : %6.3f  %6.3f  %6.3f%n", S2_1, S2_2, S2_3 );
+		//System.out.println("Площадь ВТОРОГО треугольника : " + S2_1 + "  " + S2_2 + "  " + S2_3);
+		System.out.println("-------------------------------------------------------");
+		
+		double S2 = ( S2_1 + S2_2 + S2_3 ) / 3;
+		
+		System.out.println("---------------------------------------");
+		
+		System.out.printf("Площадь ВТОРОГО треугольника : %6.3f%n", S2 );
+		//System.out.println("Площадь ВТОРОГО треугольника : " + S2 );
+		System.out.println("---------------------------------------");
+		
+		double S_com = S1 + S2_1;
+		
+		return S_com;
+		
+	}
 	
 }
