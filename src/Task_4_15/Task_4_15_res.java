@@ -56,25 +56,26 @@ public class Task_4_15_res {
 	
 	
 	// Метод для формирования массива, элементами которого являются цифры числа N
-		public ArrayList numberEnter( double A ){
+	public ArrayList numberEnter( double A ){
+		
+		ArrayList<Integer> array = new ArrayList<Integer>();
 			
-			ArrayList<Integer> array = new ArrayList<Integer>();
-				
-				while(A > 0) {
-				
-				int i = 0;
-				
-				double temp = A % 10;
-				
-				array.add(i, (int) temp);
-				
-				A = ( A - temp ) / 10;
-				
-				i++;
-				
-				}
+			while(A > 0) {
+			
+			int i = 0;
+			
+			double temp = A % 10;
+			
+			array.add(i, (int) temp);
+			
+			A = ( A - temp ) / 10;
+			
+			i++;
+			
+			}
 			return array;
 		}
+		
 		
 		// Поиск всех натуральных n-значных чисел, цифры в которых образуют строго возрастающую последовательность
 		
@@ -92,6 +93,31 @@ public class Task_4_15_res {
 			}
 			
 			return check;
+		}
+		
+		
+		// Поиск всех натуральных n-значных чисел, цифры в которых образуют строго возрастающую последовательность
+		public void Num_search( double Num_min, double Num_max) {
+			
+			System.out.println("----------------------------------------------------------------------------------------------------------");
+			System.out.print("Числа, цифры в которых образуют строго возрастающую последовательность : ");
+			
+			for ( double i = Num_min; i <= Num_max; i++) {
+				
+				ArrayList array = numberEnter(i);
+				
+				int check = Asc_Seq(array);
+				
+				if ( check == 0 ) {
+					
+					System.out.print( (int)i + "  ");
+					
+				}
+				
+			}
+			
+			System.out.println("");
+			System.out.println("----------------------------------------------------------------------------------------------------------");
 		}
 	
 }
