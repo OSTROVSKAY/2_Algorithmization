@@ -20,5 +20,5 @@ public class Task_4_7_res {
 		
 		return fact;
 	}
-
+	
 }
