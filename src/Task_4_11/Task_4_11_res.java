@@ -11,6 +11,7 @@ public class Task_4_11_res {
 	public double InputDouble() {
 		
 		int check = 1;
+		
 		int check1 = 0;
 		
 		double x = 0;
@@ -30,20 +31,20 @@ public class Task_4_11_res {
 				
 				if( ! ReturnValue) {
 					
-					check1 ++;
+					check1++;
 					
 				}
 			}
 			
 			check = 1;
 			
-			if (check1 == 0 ) {
+			if ( check1 == 0 ) {
 				
 				try {
 					x = Double.parseDouble(xx);
 					}
 					catch (NumberFormatException e) {
-					
+						
 						check = 0;
 						System.out.println("------------------------------------------");
 						System.out.println("Данные введены не правильно. Введите снова");
@@ -69,6 +70,7 @@ public class Task_4_11_res {
 	public String InputString() {
 		
 		int check = 1;
+		
 		int check1 = 0;
 		
 		String x = null;
@@ -88,7 +90,7 @@ public class Task_4_11_res {
 				
 				if( ! ReturnValue) {
 					
-					check1 ++;
+					check1++;
 					
 				}
 			}
@@ -101,7 +103,7 @@ public class Task_4_11_res {
 					x = xx;
 					}
 					catch (NumberFormatException e) {
-					
+						
 						check = 0;
 						System.out.println("------------------------------------------");
 						System.out.println("Данные введены не правильно. Введите снова");
