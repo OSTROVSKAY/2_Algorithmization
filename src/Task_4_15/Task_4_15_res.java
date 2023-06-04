@@ -78,7 +78,6 @@ public class Task_4_15_res {
 		
 		
 		// Поиск всех натуральных n-значных чисел, цифры в которых образуют строго возрастающую последовательность
-		
 		public int Asc_Seq( ArrayList array) {
 			
 			int check = 0;
