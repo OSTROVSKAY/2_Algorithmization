@@ -32,7 +32,7 @@ public class Task_4_10_res {
 				
 				if( ! ReturnValue) {
 					
-					check1 ++;
+					check1++;
 					
 				}
 			}
@@ -45,7 +45,7 @@ public class Task_4_10_res {
 					x = Double.parseDouble(xx);
 					}
 					catch (NumberFormatException e) {
-					
+						
 						check = 0;
 						System.out.println("------------------------------------------");
 						System.out.println("Данные введены не правильно. Введите снова");
@@ -55,7 +55,7 @@ public class Task_4_10_res {
 						System.out.println("-----------------------------------");
 			}
 			
-			else 
+			else
 				{
 				System.out.println("------------------------------------------");
 				System.out.println("Данные введены не правильно. Введите снова");
