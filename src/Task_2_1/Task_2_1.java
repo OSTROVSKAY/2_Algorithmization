@@ -85,13 +85,16 @@ public class Task_2_1 {
 		// Дана матрица. Вывести на экран все нечетные столбцы, у которых первый элемент больше последнего.
 		
 		for (int i = 0; i < X; i++) {  // X - Число строк
-			for (int j = 0; j < Y; j += 2) {  // Y - Число столбцов
+			for (int j = 0; j < Y; j++) {  // Y - Число столбцов
 				
-				if ( array[0][j] > array[X - 1][j] ) {
+				if ( array[0][j] > array[X - 1][j] & j % 2 == 0 ) {
 					
 				//	System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 					System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
 					}
+					else {
+						System.out.printf( "               " );
+						}
 				}
 				System.out.println();
 			}
