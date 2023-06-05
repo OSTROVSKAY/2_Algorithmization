@@ -38,10 +38,16 @@ public class Task_2_7_res {
 		}
 		
 		
+/*
+	В Java Math.cos() возвращает косинус указанного в радианах double значения.
+	В Java Math.sin() возвращает синус указанного в радианах double значения.
+	В Java Math.tan() возвращает тангенс указанного в радианах double значения.
+*/
+	
 	public double Input( int I, int J, int N) {
-				
+			
 			double x;
-			x = Math.sin( ( I*I - J*J ) / N );
+			x = Math.sin( Math.toRadians( ( I*I - J*J ) / N ) );
 			return x;
 		}
 	}

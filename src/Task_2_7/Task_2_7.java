@@ -36,7 +36,7 @@ public class Task_2_7 {
 			
 			int X = 0; // Число строк квадратной матрицы
 			int Y = 0; // Число столбцов квадратной матрицы
-			
+				
 				do {
 					X = Inp.InputInt();
 					
@@ -53,7 +53,7 @@ public class Task_2_7 {
 					
 			// Объявление двумерного массива
 			double[][] array = new double[X][Y];
-				
+			
 			// Заполнение двумерного массива 
 			double value = 0;
 			
