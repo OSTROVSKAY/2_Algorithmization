@@ -7,25 +7,24 @@
 package Task_1_4;
 	
 import java.math.BigDecimal;
+	
 import java.math.RoundingMode;
 	
 public class Task_1_4 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ЗАМЕНА НАИБОЛЬШЕГО ЭЛЕМЕНТА МАССИВА НАИМЕНЬШИМ, ЗАМЕНА НАИМЕНЬШЕГО ЭЛЕМЕНТА МАССИВА НАИБОЛЬШИМ");
 		System.out.println("----------------------------------------------------------------------------------------------------------");
+		System.out.println("ПРОГРАММА : ЗАМЕНА НАИБОЛЬШЕГО ЭЛЕМЕНТА МАССИВА НАИМЕНЬШИМ, ЗАМЕНА НАИМЕНЬШЕГО ЭЛЕМЕНТА МАССИВА НАИБОЛЬШИМ");
 		System.out.println("----------------------------------------------------------------------------------------------------------");
 		
 		System.out.println("Введите размер массива A[N] : N");
 		System.out.println("----------------------------------");
 		
-		Task_1_4_res Inp = new Task_1_4_res();
-		
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_1_4_res.InputInt();
 			
 			if ( N <= 0 )
 			{
@@ -51,8 +50,8 @@ public class Task_1_4 {
 					result = result.setScale(3, RoundingMode.UP );
 					nums[i] = result.doubleValue();
 					}
-				
-					// Вывод первоначального массива на печать
+					
+				// Вывод первоначального массива на печать
 				System.out.println("-----------------------------------------");
 				System.out.println("Вывод первоначального массива на печать :");
 				System.out.println("-----------------------------------------");
@@ -65,7 +64,7 @@ public class Task_1_4 {
 					// System.out.println("Номер элемента массива :  " +  i + "  ||  " + "Значение элемента массива :  " + nums[i] );
 					System.out.println("---------------------------------------------------------------------");
 					}
-				
+					
 				System.out.println("---------------------------------------------------------------------");
 				
 				// Поиск Наибольшего элемента массива
@@ -75,10 +74,11 @@ public class Task_1_4 {
 				
 				for ( int i = 0; i < nums.length; i++) {
 					
-					if ( nums[i] > max) {
+					if ( nums[i] > max)
+						{
 						max = nums[i];
 						imax = i;
-					}
+						}
 				}
 				
 				System.out.println("--------------------------------------------------------------------------------------------");
@@ -93,9 +93,10 @@ public class Task_1_4 {
 				
 				for ( int i = 0; i < nums.length; i++) {
 					
-					if ( nums[i] < min) {
-						min = nums[i];
-						imin = i;
+					if ( nums[i] < min)
+					{
+					min = nums[i];
+					imin = i;
 					}
 				}
 				
@@ -112,20 +113,23 @@ public class Task_1_4 {
 				double exch;
 				
 				exch = nums[imin];
+				
 				nums[imin] = nums[imax];
+				
 				nums[imax] = exch;
 				
-					// Вывод изменённого массива на печать
+				// Вывод изменённого массива на печать
 				System.out.println("-------------------------------------");
 				System.out.println("Вывод изменённого массива на печать :");
 				System.out.println("-------------------------------------");
 				
-				for ( int i = 0; i < nums.length; i++) {
+				for ( int i = 0; i < nums.length; i++) 
+					{
 					System.out.println("---------------------------------------------------------------------");
 					System.out.printf( "Номер элемента массива : %2d  ||  Значение элемента массива : %5.3f%n", i, nums[i] );
 					// System.out.println("Номер элемента массива :  " +  i + "  ||  " + "Значение элемента массива :  " + nums[i] );
 					System.out.println("---------------------------------------------------------------------");
-				}
+					}
 	}
 	
 }

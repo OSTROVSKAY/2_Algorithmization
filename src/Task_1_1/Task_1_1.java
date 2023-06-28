@@ -10,19 +10,17 @@ public class Task_1_1 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ВЫЧИСЛЕНИЕ СУММЫ ЭЛЕМЕНТОВ МАССИВА, КОТОРЫЕ КРАТНЫ К");
 		System.out.println("----------------------------------------------------------------");
+		System.out.println("ПРОГРАММА : ВЫЧИСЛЕНИЕ СУММЫ ЭЛЕМЕНТОВ МАССИВА, КОТОРЫЕ КРАТНЫ К");
 		System.out.println("----------------------------------------------------------------");
 		
 		System.out.println("Введите размер массива A[N] : N");
 		System.out.println("----------------------------------");
 		
-		Task_1_1_res Inp = new Task_1_1_res();
-		
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_1_1_res.InputInt();
 			
 			if ( N <= 0 )
 			{
@@ -40,7 +38,7 @@ public class Task_1_1 {
 		int K = 0;
 		
 		do {
-			K = Inp.InputInt();
+			K = Task_1_1_res.InputInt();
 			
 			if ( K <= 0 )
 			{
@@ -85,6 +83,7 @@ public class Task_1_1 {
 		int sum = 0;
 		
 		for ( int i = 0; i < nums.length; i++) {
+			
 			if ( (nums[i] % K) == 0 ) {
 				
 				sum = sum + nums[i];

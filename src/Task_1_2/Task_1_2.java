@@ -8,25 +8,24 @@
 package Task_1_2;
 	
 import java.math.BigDecimal;
+	
 import java.math.RoundingMode;
 	
 public class Task_1_2 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ЗАМЕНА ЧЛЕНОВ ПОСЛЕДОВАТЕЛЬНОСТИ, КОТОРЫЕ БОЛЬШЕ Z, ЧИСЛОМ Z");
 		System.out.println("------------------------------------------------------------------------");
+		System.out.println("ПРОГРАММА : ЗАМЕНА ЧЛЕНОВ ПОСЛЕДОВАТЕЛЬНОСТИ, КОТОРЫЕ БОЛЬШЕ Z, ЧИСЛОМ Z");
 		System.out.println("------------------------------------------------------------------------");
 		
 		System.out.println("Введите размер массива A[N] : N");
 		System.out.println("----------------------------------");
 		
-		Task_1_2_res Inp = new Task_1_2_res();
-		
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_1_2_res.InputInt();
 			
 			if ( N <= 0 )
 			{
@@ -40,7 +39,7 @@ public class Task_1_2 {
 		System.out.println("Введите число Z :  ");
 		System.out.println("----------------------------------");
 		
-		int Z = Inp.InputInt();
+		int Z = Task_1_2_res.InputInt();
 		
 		// Объявление одномерного массива размерностью N
 		double nums[] = new double[N];
@@ -52,7 +51,7 @@ public class Task_1_2 {
 			
 			value = -100 + ( Math.random() * (100 - (-100) ) );
 			BigDecimal result = new BigDecimal(value);
-				
+			
 			result = result.setScale(3, RoundingMode.UP );
 			nums[i] = result.doubleValue();
 			}
@@ -61,7 +60,7 @@ public class Task_1_2 {
 		System.out.println("-----------------------------------------");
 		System.out.println("Вывод первоначального массива на печать :");
 		System.out.println("-----------------------------------------");
-			
+		
 		for ( int i = 0; i < nums.length; i++) {
 			
 			System.out.println("---------------------------------------------------------------------");
@@ -81,11 +80,13 @@ public class Task_1_2 {
 		System.out.println("---------------------------------------------------------");
 		
 		for ( int i = 0; i < nums.length; i++) {
+			
 			if ( nums[i] > Z )
 				{
 				b = nums[i];
 				nums[i] = Z;
 				a = a + 1;
+				
 				System.out.println("----------------------------------------------------------------------------------------------------------------------------");
 				System.out.printf("Номер элемента массива :  %2d  ||  Новое значение элемента массива :  %5.3f  ||  Старое значение элемента массива :  %5.3f%n", i, nums[i], b);
 				// System.out.println("Номер элемента массива :  " +  i + "  ||  " + "Новое значение элемента массива :  " + nums[i] + "  ||  "  + "Старое значение элемента массива :  " + b);

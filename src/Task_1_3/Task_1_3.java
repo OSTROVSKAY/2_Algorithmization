@@ -7,25 +7,24 @@
 package Task_1_3;
 	
 import java.math.BigDecimal;
+	
 import java.math.RoundingMode;
 	
 public class Task_1_3 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ПОДСЧЁТ В МАССИВЕ ДЕЙСТВИТЕЛЬНЫХ ЧИСЕЛ ОТРИЦАТЕЛЬНЫХ, ПОЛОЖИТЕЛЬНЫХ И НУЛЕВЫХ ЭЛЕМЕНТОВ");
 		System.out.println("---------------------------------------------------------------------------------------------------");
+		System.out.println("ПРОГРАММА : ПОДСЧЁТ В МАССИВЕ ДЕЙСТВИТЕЛЬНЫХ ЧИСЕЛ ОТРИЦАТЕЛЬНЫХ, ПОЛОЖИТЕЛЬНЫХ И НУЛЕВЫХ ЭЛЕМЕНТОВ");
 		System.out.println("---------------------------------------------------------------------------------------------------");
 		
 		System.out.println("Введите размер массива A[N] : N");
 		System.out.println("----------------------------------");
 		
-		Task_1_3_res Inp = new Task_1_3_res();
-		
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_1_3_res.InputInt();
 			
 			if ( N <= 0 )
 				{
@@ -37,7 +36,7 @@ public class Task_1_3 {
 		} while ( N <= 0 );
 		
 		
-		// Объявление одномерного массива размерностью N
+			// Объявление одномерного массива размерностью N
 			double nums[] = new double[N];
 			
 			// Заполнение массива рандомно

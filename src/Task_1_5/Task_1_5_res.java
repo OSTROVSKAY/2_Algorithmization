@@ -4,11 +4,10 @@ package Task_1_5;
 import java.util.Scanner;
 	
 public class Task_1_5_res {
-	
-	// Ввод данных
-	
-		public int InputInt() {
-			
+		
+		// Ввод данных
+		public static int InputInt() {
+		
 		int check = 1;
 		int x = 0;
 		
@@ -30,11 +29,12 @@ public class Task_1_5_res {
 					System.out.println("Данные введены не правильно. Введите снова");
 					System.out.println("------------------------------------------");
 					}
-				
+					
 		System.out.println("----------------------------------");
 		
 		} while ( check == 0 );
-			return x;
+		
+		return x;
 	}
 	
 }

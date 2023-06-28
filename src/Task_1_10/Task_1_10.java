@@ -8,25 +8,21 @@
 	
 package Task_1_10;
 	
-import java.util.ArrayList;
-	
 public class Task_1_10 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : СЖАТИЕ МАССИВА");
 		System.out.println("--------------------------");
+		System.out.println("ПРОГРАММА : СЖАТИЕ МАССИВА");
 		System.out.println("--------------------------");
 		
 		System.out.println("Введите размер массива A[N] : N - Размер массива");
 		System.out.println("------------------------------------------------");
 		
-		Task_1_10_res Inp = new Task_1_10_res();
-		
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_1_10_res.InputInt();
 			
 			if ( N <= 0 )
 				{
@@ -41,16 +37,18 @@ public class Task_1_10 {
 		int nums[] = new int[N];
 		
 		// Заполнение массива рандомно
-		for ( int i = 0; i < N; i++ ) {
+		for ( int i = 0; i < N; i++ )
+			{
 			nums[i] = -100 + (int) ( Math.random()*(100-(-100)) );
 			}
 			
-			// Вывод массива целых чисел на печать
+		// Вывод массива целых чисел на печать
 		System.out.println("-------------------------------------");
 		System.out.println("Вывод массива целых чисел на печать :");
 		System.out.println("-------------------------------------");
 		
-		for ( int i = 0; i < nums.length; i++) {
+		for ( int i = 0; i < nums.length; i++)
+			{
 			System.out.println("-------------------------------------------------------------------");
 			
 			System.out.printf( "Номер элемента массива : %3d  ||  Значение элемента массива : %4d%n", i, nums[i] );
@@ -64,9 +62,10 @@ public class Task_1_10 {
 		
 		for ( int i = 0; i < nums.length; i++) {
 			
-			if( ((i+1) % 2) == 0 ) {
-			nums [i] = 0;
-			}
+			if( ((i+1) % 2) == 0 )
+				{
+				nums [i] = 0;
+				}
 		}
 		
 		// Вывод изменённого массива целых чисел на печать
@@ -74,14 +73,15 @@ public class Task_1_10 {
 		System.out.println("Вывод массива целых чисел на печать :");
 		System.out.println("-------------------------------------");
 		
-		for ( int i = 0; i < nums.length; i++) {
+		for ( int i = 0; i < nums.length; i++)
+			{
 			System.out.println("-------------------------------------------------------------------");
 			
 			System.out.printf( "Номер элемента массива : %3d  ||  Значение элемента массива : %4d%n", i, nums[i] );
 			// System.out.println("Номер элемента массива :  " +  i + "  ||  " + "Значение элемента массива :  " + nums[i] );
 			System.out.println("-------------------------------------------------------------------");
-		}
-		
+			}
+			
 		System.out.println("-------------------------------------------------------------------");
 	}
 	
