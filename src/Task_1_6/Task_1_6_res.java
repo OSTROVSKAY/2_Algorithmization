@@ -28,12 +28,12 @@ public class Task_1_6_res {
 						System.out.println("------------------------------------------");
 						System.out.println("Данные введены не правильно. Введите снова");
 						System.out.println("------------------------------------------");
-					}
-				
+						}
+						
 				System.out.println("----------------------------------");
 				
 			} while ( check == 0 );
 			
-			return x;
+		return x;
 	}
 }

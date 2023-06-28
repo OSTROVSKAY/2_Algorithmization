@@ -153,14 +153,14 @@ public class Task_1_8 {
 		
 		// Заполнение нового массива ArrayList
 		for ( x = 0;  x < nums.length; x++ )
-				{
+			{
 				
 				if ( nums[x] !=  min )
 					{
 					nums2.add(nums[x]);
 					}
-				}
-				
+			}
+			
 		// Вывод массива целых чисел на печать
 		System.out.println("--------------------------------------------");
 		System.out.println("Вывод нового массива целых чисел на печать :");
