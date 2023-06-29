@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Task_2_3_res {
 	
 	// Ввод данных
-	
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -24,16 +23,17 @@ public class Task_2_3_res {
 				x = Integer.parseInt(xx);
 				}
 				catch (NumberFormatException e) {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-				}
-				
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 			System.out.println("----------------------------------");
 			
 		} while ( check == 0 );
-		return x;
-		}
+		
+	return x;
+	}
 }

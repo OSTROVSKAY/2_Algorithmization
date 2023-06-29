@@ -13,8 +13,8 @@ public class Task_2_9 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ВЫВОД МАТРИЦЫ НА ЭКРАН");
 		System.out.println("----------------------------------");
+		System.out.println("ПРОГРАММА : ВЫВОД МАТРИЦЫ НА ЭКРАН");
 		System.out.println("----------------------------------");
 		
 		System.out.println("Введите размер массива A[X][Y] :");
@@ -22,15 +22,13 @@ public class Task_2_9 {
 		System.out.println("X - Число строк. Y - Число столбцов.");
 		System.out.println("------------------------------------");
 		
-		Task_2_9_res Inp = new Task_2_9_res();
-		
 		
 		// Ввод числа строк матрицы
 		System.out.println("Введите :  X - Число строк : ");
 		int X = 0;
 		
 		do {
-			X = Inp.InputInt();
+			X = Task_2_9_res.InputInt();
 			
 			if ( X <= 0 )
 				{
@@ -48,7 +46,7 @@ public class Task_2_9 {
 		int Y = 0;
 		
 		do {
-			Y = Inp.InputInt();
+			Y = Task_2_9_res.InputInt();
 			
 			if ( Y <= 0 )
 				{
@@ -56,6 +54,7 @@ public class Task_2_9 {
 				System.out.println("Введенные данные меньше или равно 0. Введите снова");
 				System.out.println("--------------------------------------------------");
 				}
+				
 		} while ( Y <= 0 );
 		
 		
@@ -63,9 +62,11 @@ public class Task_2_9 {
 		int[][] array = new int[X][Y];
 		
 		
-				// Заполнение двумерного массива рандомно
+		// Заполнение двумерного массива рандомно
 		for (int i = 0; i < X; i++) {
+			
 			for (int j = 0; j < Y; j++) {
+				
 				array[i][j] = 0 + (int) ( Math.random()*(100-0));
 			}
 		}
@@ -73,13 +74,16 @@ public class Task_2_9 {
 		
 		// Вывод двумерного массива на печать
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		
 		for (int i = 0; i < array.length; i++) {  // X - Число строк
+			
 			for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
 				
 				System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
 				//System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
-				System.out.println();
+				
+			System.out.println();
 		}
 		
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -109,6 +113,7 @@ public class Task_2_9 {
 			// System.out.println("Номер столбца : " + z + "  ||  " + "Значение суммы элементов столбца : " +  sum);
 			System.out.printf( " %3d :   %4d  ",z,sum);
 			// System.out.print (z + "  :  " + sum + "       " );
+			
 			nums.add(sum);
 			sum = 0;
 		}

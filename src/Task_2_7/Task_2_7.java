@@ -7,14 +7,15 @@
 package Task_2_7;
 	
 import java.math.BigDecimal;
+	
 import java.math.RoundingMode;
 	
 public class Task_2_7 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ КВАДРАТНОЙ МАТРИЦЫ");
 		System.out.println("-------------------------------------------");
+		System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ КВАДРАТНОЙ МАТРИЦЫ");
 		System.out.println("-------------------------------------------");
 		
 		int check = 0;
@@ -27,10 +28,8 @@ public class Task_2_7 {
 			System.out.println("Матрица квадратная. Число строк равно числу столбцов");
 			System.out.println("----------------------------------------------------");
 			
-			Task_2_7_res Inp = new Task_2_7_res();
 			
 			// Ввод числа строк и столбцов матрицы
-			
 			System.out.println("Введите число строк и столбцов квадратной матрицы :");
 			System.out.println("---------------------------------------------------");
 			
@@ -38,8 +37,8 @@ public class Task_2_7 {
 			int Y = 0; // Число столбцов квадратной матрицы
 				
 				do {
-					X = Inp.InputInt();
-					
+					X = Task_2_7_res.InputInt();
+						
 						if ( X <= 0 )
 							{
 							System.out.println("--------------------------------------------------");
@@ -54,21 +53,24 @@ public class Task_2_7 {
 			// Объявление двумерного массива
 			double[][] array = new double[X][Y];
 			
-			// Заполнение двумерного массива 
+			// Заполнение двумерного массива
 			double value = 0;
-			
+				
 				for (int i = 0; i < X; i++) {
-					for (int j = 0; j < Y; j++) {
 					
-						value = Inp.Input(i, j, Y);
+					for (int j = 0; j < Y; j++) {
+						
+						value = Task_2_7_res.Input(i, j, Y);
+						
 						BigDecimal result = new BigDecimal(value);
+						
 						result = result.setScale(3, RoundingMode.DOWN );
+						
 						array[i][j] = result.doubleValue();
 					}
 				}
 				
 			// Вывод двумерного массива на печать
-				
 			System.out.println("------------------------------------");
 			System.out.println("Вывод двумерного массива на печать :");
 			System.out.println("------------------------------------");
@@ -83,6 +85,7 @@ public class Task_2_7 {
 					// System.out.print(array[i][j] + "\t");
 					// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
+				
 				System.out.println();
 			}
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -97,6 +100,7 @@ public class Task_2_7 {
 					for (int j = 0; j < array[i].length; j++) { // Y - Число столбцов
 						
 						if ( array[i][j] > 0 ) {
+							
 							count = count + 1;
 						}
 					}
@@ -114,7 +118,7 @@ public class Task_2_7 {
 					System.out.println("Введите : 1 - Да или 0 - Нет");
 					System.out.println("----------------------------");
 					
-					check = Inp.InputInt();
+					check = Task_2_7_res.InputInt();
 					
 					if ( check < 0 | check > 1 )
 						{
@@ -122,7 +126,7 @@ public class Task_2_7 {
 						System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
 						System.out.println("------------------------------------------------");
 						}
-					
+						
 				} while ( check < 0 | check > 1 );
 				
 				try {
@@ -134,7 +138,7 @@ public class Task_2_7 {
 						System.out.println("Ошибка в работе программы");
 						System.out.println("-------------------------");
 						}
-				
+						
 			} while ( check == 1 );
 			
 		}

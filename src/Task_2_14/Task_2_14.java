@@ -10,8 +10,8 @@ public class Task_2_14 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ МАТРИЦЫ");
 		System.out.println("--------------------------------");
+		System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ МАТРИЦЫ");
 		System.out.println("--------------------------------");
 		
 		System.out.println("Введите размер массива A[X][Y] :");
@@ -21,14 +21,12 @@ public class Task_2_14 {
 		System.out.println("Число строк (X) больше или равно числу столбцов (Y)");
 		System.out.println("---------------------------------------------------");
 		
-		Task_2_14_res object = new Task_2_14_res();
-		
 		// Ввод числа строк матрицы
 		System.out.println("Введите :  X - Число строк : ");
 		int X = 0;
 		
 		do {
-			X = object.InputInt();
+			X = Task_2_14_res.InputInt();
 			
 			if ( X <= 0 )
 				{
@@ -44,9 +42,9 @@ public class Task_2_14 {
 		System.out.println("Введите : Y - Число столбцов : ");
 		
 		int Y = 0;
-		
+			
 			do {
-				Y = object.InputInt();
+				Y = Task_2_14_res.InputInt();
 				
 				if ( Y <= 0 )
 					{
@@ -54,7 +52,7 @@ public class Task_2_14 {
 					System.out.println("Введенные данные меньше или равно 0. Введите снова");
 					System.out.println("--------------------------------------------------");
 					}
-				
+					
 				if ( X < Y )
 					{
 					System.out.println("-----------------------------------------------------------------------");
@@ -77,7 +75,7 @@ public class Task_2_14 {
 			единиц равно номеру столбца.
 			*/
 			
-			object.FillMass( array, X, Y);
+			Task_2_14_res.FillMass(array, X, Y);
 			
 			// Вывод двумерного массива на печать
 			System.out.println("----------------------------------- ");
@@ -85,7 +83,7 @@ public class Task_2_14 {
 			System.out.println("------------------------------------");
 			
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
-			object.PrintMass(array);
+			Task_2_14_res.PrintMass(array);
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 	}
 	

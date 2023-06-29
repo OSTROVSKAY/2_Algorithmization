@@ -7,8 +7,8 @@ public class Task_2_3 {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("ПРОГРАММА : ВЫВОД МАТРИЦЫ НА ЭКРАН");
 		System.out.println("----------------------------------");
+		System.out.println("ПРОГРАММА : ВЫВОД МАТРИЦЫ НА ЭКРАН");
 		System.out.println("----------------------------------");
 		
 		System.out.println("Введите размер массива A[X][Y] :");
@@ -16,7 +16,6 @@ public class Task_2_3 {
 		System.out.println("X - Число строк. Y - Число столбцов.");
 		System.out.println("------------------------------------");
 		
-		Task_2_3_res Inp = new Task_2_3_res();
 		
 		// Ввод числа строк матрицы
 		System.out.println("Введите :  X - Число строк : ");
@@ -24,7 +23,7 @@ public class Task_2_3 {
 		int X = 0;
 		
 		do {
-			X = Inp.InputInt();
+			X = Task_2_3_res.InputInt();
 			
 			if ( X <= 0 )
 				{
@@ -32,6 +31,7 @@ public class Task_2_3 {
 				System.out.println("Введенные данные меньше или равно 0. Введите снова");
 				System.out.println("--------------------------------------------------");
 				}
+				
 		} while ( X <= 0 );
 		
 		
@@ -41,7 +41,7 @@ public class Task_2_3 {
 		int Y = 0;
 		
 		do {
-			Y = Inp.InputInt();
+			Y = Task_2_3_res.InputInt();
 			
 			if ( Y <= 0 )
 				{
@@ -60,7 +60,7 @@ public class Task_2_3 {
 		int K = 0;
 		
 		do {
-			K = Inp.InputInt();
+			K = Task_2_3_res.InputInt();
 			
 			if ( K <= 0 )
 				{
@@ -75,8 +75,7 @@ public class Task_2_3 {
 					System.out.println("Такой строки нет. Введите снова");
 					System.out.println("-------------------------------");
 					}
-				
-				
+					
 			} while ( K <= 0 | K > X);
 			
 			
@@ -87,7 +86,7 @@ public class Task_2_3 {
 		int P = 0;
 		
 		do {
-			P = Inp.InputInt();
+			P = Task_2_3_res.InputInt();
 			
 			if ( P <= 0 )
 				{
@@ -104,14 +103,16 @@ public class Task_2_3 {
 				}
 				
 		} while ( P <= 0 | P > Y);
-			
-			
+		
+		
 		// Объявление двумерного массива
 		int[][] array = new int[X][Y];
 		
 		// Заполнение двумерного массива рандомно
 		for (int i = 0; i < X; i++) {
+			
 			for (int j = 0; j < Y; j++) {
+				
 				array[i][j] = -100 + (int) ( Math.random()*(100-(-100)) );
 			}
 		}
@@ -121,13 +122,15 @@ public class Task_2_3 {
 		System.out.println("----------------------------------------------------");
 		System.out.println("Вывод первоначального двумерного массива на печать :");
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
-			
+		
 		for (int i = 0; i < array.length; i++) {  // X - Число строк
+			
 			for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
 				
 				System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
 				//System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 				}
+				
 				System.out.println();
 		}
 		
@@ -140,14 +143,19 @@ public class Task_2_3 {
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 		for (int i = 0; i < array.length; i++) {  // X - Число строк
+			
 			for (int j = 0; j < array[i].length; j++) {  // Y - Число столбцов
+					
 					if ( (K - 1) == i ) {
 						
 						System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
 						//System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 						}
+						
 					else { System.out.printf( "           "  + "\t" ); }
+					
 					}
+					
 					System.out.println();
 				}
 				
@@ -168,8 +176,10 @@ public class Task_2_3 {
 							System.out.printf( "%4d  (%2d %2d)  ",array[i][j],i,j );
 							//System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 							}
+							
 							else { System.out.printf( "           "  + "\t" ); }
 						}
+						
 						System.out.println();
 			}
 			

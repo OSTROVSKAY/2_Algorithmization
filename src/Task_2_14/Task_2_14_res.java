@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_2_14_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -23,24 +23,25 @@ public class Task_2_14_res {
 				x = Integer.parseInt(xx);
 				}
 				catch (NumberFormatException e) {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-				}
-				
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 				System.out.println("----------------------------------");
 				
-		} while ( check == 0 );
-			return x;
-		}
+			} while ( check == 0 );
+			
+		return x;
+	}
 	
 	
 	// Заполнение двумерного массива. Массив заполняется НУЛЯМИ и ЕДИНИЦАМИ
 	// В каждом столбце число единиц равно номеру столбца
 	
-	public void FillMass( int[][] array, int X, int Y) {
+	public static void FillMass( int[][] array, int X, int Y) {
 		
 		int j = 0;
 		int i = 0;
@@ -70,20 +71,22 @@ public class Task_2_14_res {
 			one = 0;
 			one1 = 0;
 			
-			if (j < Y ) {
+			if (j < Y )
+				{
 				one = j + 1;
-				one1 = j + 1;}
-			
+				one1 = j + 1;
+				}
+				
 			for ( i = 0; i < X; i++ ) {
-			
+				
 				if ( one > 0 ) {
 					
 					arr = Math.random();
-					
-						if ( arr < 0.5 )  { array [i][j] = 0; }
 						
+						if ( arr < 0.5 ) { array [i][j] = 0; }
+							
 							else { array [i][j] = 1; }
-						}
+						}	
 							else { array [i][j] = 0; }
 							
 					if ( array [i][j] == 1 ) { one = one - 1; }
@@ -97,7 +100,7 @@ public class Task_2_14_res {
 				
 				for ( i = 0; i < X; i++ ) {
 					
-					if (  array [i][j] == 1 ) { oneis =  oneis + 1;}
+					if ( array [i][j] == 1 ) { oneis =  oneis + 1;}
 					
 				}
 				
@@ -112,9 +115,9 @@ public class Task_2_14_res {
 						if ( mustone1 > 0 & array [i][j] == 0) {
 							
 							arr = Math.random();
-							
-								if ( arr < 0.5 )  { array [i][j] = 0; }
 								
+								if ( arr < 0.5 ) { array [i][j] = 0; }
+									
 									else { array [i][j] = 1; }
 						}
 							
@@ -133,7 +136,7 @@ public class Task_2_14_res {
 	
 	
 	// Вывод двумерного массива на печать
-	public void PrintMass( int[][] array ) {
+	public static void PrintMass( int[][] array ) {
 		
 		for (int i = 0; i < array.length; i++) {  // X - Число строк
 			
@@ -144,7 +147,8 @@ public class Task_2_14_res {
 				// System.out.print(array[i][j] + "\t");
 				// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t" );
 				}
-			System.out.println();
+				
+			System.out.println("");
 		}
 	}
 	

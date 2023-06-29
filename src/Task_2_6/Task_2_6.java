@@ -10,8 +10,8 @@ public class Task_2_6 {
 		int check = 0;
 		
 		do {
-			System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ КВАДРАТНОЙ МАТРИЦЫ");
 			System.out.println("-------------------------------------------");
+			System.out.println("ПРОГРАММА : ФОРМИРОВАНИЕ КВАДРАТНОЙ МАТРИЦЫ");
 			System.out.println("-------------------------------------------");
 			
 			System.out.println("Введите размер массива A[X][Y] :");
@@ -21,10 +21,8 @@ public class Task_2_6 {
 			System.out.println("Матрица квадратная. Число строк равно числу столбцов");
 			System.out.println("----------------------------------------------------");
 			
-			Task_2_6_res Inp = new Task_2_6_res();
 			
 			// Ввод числа строк и столбцов матрицы
-			
 			System.out.println("Введите число строк и столбцов квадратной матрицы :");
 			System.out.println("---------------------------------------------------");
 			System.out.println("Число строк и столбцов квадратной матрицы - ЧЁТНОЕ");
@@ -34,7 +32,7 @@ public class Task_2_6 {
 			int Y = 0; // Число столбцов квадратной матрицы
 			
 			do {
-				X = Inp.InputInt();
+				X = Task_2_6_res.InputInt();
 				
 				if ( X <= 0 )
 					{
@@ -42,6 +40,7 @@ public class Task_2_6 {
 					System.out.println("Введенные данные меньше или равно 0. Введите снова");
 					System.out.println("--------------------------------------------------");
 					}
+					
 				if ( X%2 != 0 & X > 0 )
 					{
 					System.out.println("----------------------------------------------");
@@ -65,35 +64,37 @@ public class Task_2_6 {
 					
 					if ( i < ( X/2 ) ) {
 						
-						if ( (j -1 ) < ( i -1 ) | j > ( YY - 1 - i ) ) {
-						
+						if ( (j - 1 ) < ( i - 1 ) | j > ( YY - 1 - i ) ) {
+								
 								array[i][j] = 0;
 								
 						} else {
+							
 							array[i][j] = 1;
-						}
-						
+							
+							}
+							
 					}  else  if ( i > ( X/2 - 1 ) ) {
 						
-						if ( (j -1) > ( i -1) | j < (YY - 1 - i) ) {
-							
-							array[i][j] = 0;
-							
+						if ( (j - 1) > ( i - 1) | j < (YY - 1 - i) ) {
+										
+										array[i][j] = 0;
+										
 								} else {
 										array[i][j] = 1;
-								}
+										
+										}
 					}
 				}
 			}
 			
-				// Вывод двумерного массива на печать
-			
+			// Вывод двумерного массива на печать
 			System.out.println("------------------------------------");
 			System.out.println("Вывод двумерного массива на печать :");
 			System.out.println("------------------------------------");
 			
 			System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
-			
+				
 				for (int i = 0; i < array.length; i++) { // X - Число строк
 					
 					for (int j = 0; j < array[i].length; j++) { // Y - Число столбцов
@@ -102,7 +103,9 @@ public class Task_2_6 {
 						//System.out.print(array[i][j] + "\t");
 						// System.out.print(array[i][j] + "  ( " + i + " " + j + " )  " + "\t");
 					}
+					
 					System.out.println();
+					
 				}
 				System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------");
 				
@@ -114,7 +117,7 @@ public class Task_2_6 {
 					System.out.println("Введите : 1 - Да или 0 - Нет");
 					System.out.println("----------------------------");
 					
-					check = Inp.InputInt();
+					check = Task_2_6_res.InputInt();
 					
 					if ( check < 0 | check > 1 )
 						{
@@ -122,19 +125,19 @@ public class Task_2_6 {
 						System.out.println("Введеные данные не равны 0 или 1. Введите снова.");
 						System.out.println("------------------------------------------------");
 						}
-					
+						
 				} while ( check < 0 | check > 1 );
 				
 				try {
 					Thread.sleep(1500);
 					}
-						catch(InterruptedException ex)
-							{
-							System.out.println("-------------------------");
-							System.out.println("Ошибка в работе программы");
-							System.out.println("-------------------------");
-							}
-							
+					catch(InterruptedException ex)
+						{
+						System.out.println("-------------------------");
+						System.out.println("Ошибка в работе программы");
+						System.out.println("-------------------------");
+						}
+						
 		} while ( check == 1 );
 	}
 }
