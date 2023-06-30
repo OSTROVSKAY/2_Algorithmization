@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Task_4_16_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -25,23 +25,24 @@ public class Task_4_16_res {
 				x = Integer.parseInt(xx);
 				}
 				catch (NumberFormatException e) {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-				}
-			
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 			System.out.println("--------------------------------------");
 			
 			} while ( check == 0 );
 			
 		return x;
-		}
+		
+	}
 	
 	
-	// Получение  n-значного числа
-	public double Number ( int N ) {
+	// Получение n-значного числа
+	public static double Number ( int N ) {
 		
 		double Num = 0;
 		
@@ -56,7 +57,7 @@ public class Task_4_16_res {
 	
 	
 	// Метод для формирования массива, элементами которого являются цифры числа N
-	public ArrayList numberEnter( double A ){
+	public static ArrayList<Integer> numberEnter( double A ) {
 		
 		ArrayList<Integer> array = new ArrayList<Integer>();
 		
@@ -79,7 +80,7 @@ public class Task_4_16_res {
 	
 	
 	// Расчёт суммы n - значных чисел, содержащих только нечетные цифры
-	public int Odd_Dig (ArrayList array ) {
+	public static int Odd_Dig (ArrayList<Integer> array ) {
 		
 		int check = 0;
 		
@@ -96,7 +97,7 @@ public class Task_4_16_res {
 	
 	
 	// Подсчёт чётных цифр в найденной сумме чисел, содержащих только нечётные цифры
-	public int Ev_num (ArrayList array ) {
+	public static int Ev_num (ArrayList<Integer> array ) {
 		
 		int count = 0;
 		
@@ -111,10 +112,10 @@ public class Task_4_16_res {
 				
 				System.out.print((int)array.get(i) + "  ");
 			}
-		
+			
 		}
 		
-		if ( count == 0  ) {
+		if ( count == 0 ) {
 			
 			System.out.print("НЕТ ЧЁТНЫХ ЦИФР");
 		}
@@ -127,7 +128,7 @@ public class Task_4_16_res {
 	
 	
 	// Расчёт суммы n - значных чисел, содержащих только нечетные цифры. Подсчёт чётных цифр в найденной сумме
-	public void Calculation( double Num_min, double Num_max) {
+	public static void Calculation( double Num_min, double Num_max) {
 		
 		// Расчёт суммы n - значных чисел, содержащих только нечетные цифры
 		System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -137,7 +138,7 @@ public class Task_4_16_res {
 		
 		for ( double i = Num_min; i <= Num_max; i++ ) {
 			
-			ArrayList array = numberEnter(i);
+			ArrayList<Integer> array = numberEnter(i);
 			
 			int check = Odd_Dig(array);
 			
@@ -158,7 +159,7 @@ public class Task_4_16_res {
 		System.out.println("-----------------------------------------------------------------------");
 		
 		// Подсчёт чётных цифр в найденной сумме
-		ArrayList array1 = numberEnter(Sum);
+		ArrayList<Integer> array1 = numberEnter(Sum);
 		
 		int count = Ev_num (array1);
 		

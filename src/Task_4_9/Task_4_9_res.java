@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_4_9_res {
 	
 	// Ввод данных
-	public double InputDouble() {
+	public static double InputDouble() {
 		
 		int check = 1;
 		double x = 0;
@@ -39,25 +39,25 @@ public class Task_4_9_res {
 	
 	
 	// Вычисление площади четырёхугольника : если четырёхугольник - КВАДРАТ или ПРЯМОУГОЛЬНИК
-	public double Square_area( double X, double Y ) {
-		
+	public static double Square_area( double X, double Y )
+		{
 		double S = X * Y;
 		
 		return S;
-	}
+		}
 	
 	
 	// Вычисление длины гипотенузы прямоугольного треугольника. Теорема Пифагора
-	public double hypotenuse ( double Y, double TX ) {
-		
+	public static double hypotenuse ( double Y, double TX )
+		{
 		double hyp = Math.sqrt( ( Y * Y ) + ( TX * TX ) );
 		
 		return hyp;
-	}
+		}
 	
 	
 	// Площадь трапеции ( S ) равна произведению полусуммы оснований ( A, B ) на высоту ( H ). Трапеция - прямоугольная
-	public double Sq_rec_trap( double A, double B, double H) {
+	public static double Sq_rec_trap( double A, double B, double H) {
 		
 		double S = 0.5 * ( A + B ) * H;
 		
@@ -66,7 +66,7 @@ public class Task_4_9_res {
 	
 	
 	// Площадь четырёхугольника : В четырёхугольнике один угол прямой
-	public double quadrilateral (double X, double Y, double Z, double T) {
+	public static double quadrilateral (double X, double Y, double Z, double T) {
 		
 		double hyp = Math.sqrt ( ( X * X ) + ( Y * Y ) );
 		
@@ -79,6 +79,7 @@ public class Task_4_9_res {
 		double S_com = 0;
 		
 		if ( (! Double.isNaN(aa)) & (! Double.isNaN(bb)) & (! Double.isNaN(yy)) ) {
+			
 			double S1 = 0.5 * X * Y;
 			
 			System.out.println("--------------------------------------");

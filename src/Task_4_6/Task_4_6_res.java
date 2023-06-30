@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_4_6_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -54,7 +54,7 @@ public class Task_4_6_res {
 	    Сложность алгоритма Евклида равна : O(Log min(n1, n2))
 	*/
 	
-	public int Nod1 ( int a, int b ) {
+	public static int Nod1 ( int a, int b ) {
 		
 		int Nod = 0;
 		
@@ -82,7 +82,7 @@ public class Task_4_6_res {
 		 (эквивалентно меньшему числу), чтобы найти НОД.
 		*/
 		
-		int Nod2 (int a, int b) {
+		public static int Nod2 (int a, int b) {
 			
 			int Nod = 1;
 			
@@ -93,6 +93,7 @@ public class Task_4_6_res {
 					Nod = i;
 				}
 			}
+			
 			return Nod;
 		}
 		
@@ -120,36 +121,39 @@ public class Task_4_6_res {
 		*/
 		
 		
-		int Nod3 (int a, int b) {
-			if (a == 0) {
-				return b;
-			}
+		public static int Nod3 (int a, int b) {
 			
-			if (b == 0) {
-				return a;
-			}
+			if (a == 0) { return b; }
+			
+			if (b == 0) { return a; }
 			
 			int n;
-			for (n = 0; ((a | b) & 1) == 0; n++) {
+			
+			for (n = 0; ((a | b) & 1) == 0; n++)
+				{
 				a >>= 1;
 				b >>= 1;
-			}
-			
-			while ((a & 1) == 0) {
-				a >>= 1;
-			}
-			
-			do {
-				while ((b & 1) == 0) {
-					b >>= 1;
 				}
 				
-				if (a > b) {
+			while ((a & 1) == 0)
+				{
+				a >>= 1;
+				}
+				
+			do {
+				while ((b & 1) == 0)
+					{
+					b >>= 1;
+					}
+					
+				if (a > b)
+					{
 					int temp = a;
+					
 					a = b;
 					b = temp;
-				}
-				
+					}
+					
 				b = (b - a);
 				
 			} while (b != 0);
@@ -175,7 +179,7 @@ public class Task_4_6_res {
 		 Поскольку в одной из переменных ноль, он не оказывает влияние на результат.
 		*/
 		
-		int Nod4 (int a, int b) {
+		public static int Nod4 (int a, int b) {
 			
 			while ( a != 0 & b != 0 ) {
 				

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_4_14_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -29,7 +29,7 @@ public class Task_4_14_res {
 						System.out.println("Данные введены не правильно. Введите снова");
 						System.out.println("------------------------------------------");
 						}
-					
+						
 					System.out.println("--------------------------------------");
 					
 				} while ( check == 0 );
@@ -39,7 +39,7 @@ public class Task_4_14_res {
 	
 	
 	// Вычисление суммы цифр в числе
-	public int Sum ( int number, int N ) {
+	public static int Sum ( int number, int N ) {
 		
 		int sum = 0;
 		
@@ -57,7 +57,7 @@ public class Task_4_14_res {
 	
 	
 	// Вычисление количества цифр в числе
-	public int Count ( int number ) {
+	public static int Count ( int number ) {
 		
 		int count = 0;
 		

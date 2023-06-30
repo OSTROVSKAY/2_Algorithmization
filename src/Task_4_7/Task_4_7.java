@@ -14,8 +14,6 @@ public class Task_4_7 {
 		System.out.println("----------------------------------------------------------------------");
 		System.out.println("----------------------------------------------------------------------");
 		
-		Task_4_7_res Inp = new Task_4_7_res();
-		
 		// Вычисление суммы факториалов всех нечетных чисел от 1 до 9
 		
 		int fact = 0;
@@ -23,9 +21,11 @@ public class Task_4_7 {
 		
 		for ( int i = 1; i <= 9; i = i + 2 ) {
 			
-			fact = Inp.Factorial(i);
+			fact = Task_4_7_res.Factorial(i);
+			
 			System.out.println("ФАКТОРИАЛ НЕЧЁТНОГО ЧИСЛА : " + i + "  " + "РАВЕН : " + fact);
 			System.out.println("-----------------------------------------------");
+			
 			sum = sum + fact;
 			
 		}

@@ -15,8 +15,6 @@ public class Task_4_2 {
 		System.out.println("----------------------------------------");
 		System.out.println("----------------------------------------");
 		
-		Task_4_2_res Inp = new Task_4_2_res();
-		
 		// Ввод четырёх натуральных чисел
 		System.out.println("--------------------------------");
 		System.out.println("Ввод четырёх натуральных чисел :");
@@ -29,7 +27,7 @@ public class Task_4_2 {
 		int A = 0;
 		
 		do {
-			A = Inp.InputInt();
+			A = Task_4_2_res.InputInt();
 			
 			if ( A <= 0 )
 				{
@@ -48,7 +46,7 @@ public class Task_4_2 {
 		int B = 0;
 		
 		do {
-			B = Inp.InputInt();
+			B = Task_4_2_res.InputInt();
 			
 			if ( B <= 0 )
 				{
@@ -67,7 +65,7 @@ public class Task_4_2 {
 		int C = 0;
 		
 		do {
-			C = Inp.InputInt();
+			C = Task_4_2_res.InputInt();
 			
 			if ( C <= 0 )
 				{
@@ -86,7 +84,7 @@ public class Task_4_2 {
 		int D = 0;
 			
 			do {
-				D = Inp.InputInt();
+				D = Task_4_2_res.InputInt();
 				
 				if ( D <= 0 )
 					{
@@ -104,11 +102,11 @@ public class Task_4_2 {
 		
 		// Вычисление наибольшего общего делителя четырёх натуральных чисел
 		
-		int nod1 = Inp.Nod1(A, B);
+		int nod1 = Task_4_2_res.Nod1(A, B);
 		
-		int nod2 = Inp.Nod1(nod1, C);
+		int nod2 = Task_4_2_res.Nod1(nod1, C);
 		
-		int nod3 = Inp.Nod1(nod2, D);
+		int nod3 = Task_4_2_res.Nod1(nod2, D);
 		
 		System.out.println("-----------------------------------------------------------");
 		System.out.println("НАИБОЛЬШИЙ ОБЩИЙ ДЕЛИТЕЛЬ ЧЕТЫРЁХ НАТУРАЛЬНЫХ ЧИСЕЛ : " + nod3);

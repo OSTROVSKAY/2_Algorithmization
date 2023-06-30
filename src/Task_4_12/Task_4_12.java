@@ -18,8 +18,6 @@ public class Task_4_12 {
 		System.out.println("------------------------------------");
 		System.out.println("------------------------------------");
 		
-		Task_4_12_res Inp = new Task_4_12_res();
-		
 		// Ввод натурального числа : K
 		System.out.println("Введите натуральное число : K");
 		System.out.println("-----------------------------");
@@ -29,7 +27,7 @@ public class Task_4_12 {
 		int K = 0;
 		
 		do {
-			K = Inp.InputInt();
+			K = Task_4_12_res.InputInt();
 			
 			if ( K <= 0 )
 				{
@@ -50,7 +48,7 @@ public class Task_4_12 {
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_4_12_res.InputInt();
 			
 			if ( N <= 0 )
 				{
@@ -72,7 +70,7 @@ public class Task_4_12 {
 		
 		for ( int i = 1; i <= N; i++ ) {
 			
-			int Temp = Inp.Sum(i);
+			int Temp = Task_4_12_res.Sum(i);
 			
 			if ( Temp == K ) {
 				
@@ -84,7 +82,9 @@ public class Task_4_12 {
 		System.out.println("-------------------------");
 		System.out.println("ВЫВОД НА ПЕЧАТЬ МАССИВА :");
 		System.out.println("--------------------------------------------------------------------------------------");
+		
 		System.out.println(A);
+		
 		System.out.println("--------------------------------------------------------------------------------------");
 	}
 	

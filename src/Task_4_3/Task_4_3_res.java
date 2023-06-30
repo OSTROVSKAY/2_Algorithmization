@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_4_3_res {
 	
 	// Ввод данных
-	public double Input() {
+	public static double Input() {
 		
 		int check = 1;
 		double x = 0;
@@ -54,7 +54,7 @@ public class Task_4_3_res {
 	*/
 	
 	// Площадь правильного треугольника
-	public double Square ( double a ) {
+	public static double Square ( double a ) {
 		
 		double S1 = ( a * a * Math. sqrt(3) ) / 4;
 		

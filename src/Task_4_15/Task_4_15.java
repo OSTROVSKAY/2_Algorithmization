@@ -7,8 +7,6 @@
 	
 package Task_4_15;
 	
-import java.util.ArrayList;
-	
 public class Task_4_15 {
 	
 	public static void main(String[] args) {
@@ -18,8 +16,6 @@ public class Task_4_15 {
 	System.out.println("--------------------------------------------------------------------------------------------------------------------");
 	System.out.println("--------------------------------------------------------------------------------------------------------------------");
 	
-	Task_4_15_res Inp = new Task_4_15_res();
-	
 	// Ввод натурального числа N : Число разрядов в n-значном числе
 	System.out.println("Введите число разрядов в n-значном числе : N");
 	System.out.println("--------------------------------------------");
@@ -27,7 +23,7 @@ public class Task_4_15 {
 	int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_4_15_res.InputInt();
 			
 			if ( N <= 0 )
 				{
@@ -47,13 +43,13 @@ public class Task_4_15 {
 		double Num_min = (Math.pow(10, (N-1)));
 		
 		// Расчёт самого большого n-значного числа
-		double Num_max = Inp.Number(N);
+		double Num_max = Task_4_15_res.Number(N);
 		
 		System.out.printf("Самое малое n-значное число : %9.0f   Самое большое n-значное число :  %9.0f   Количество разрядов в числе : %3d%n", Num_min, Num_max, N );
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------");
 		
 		// Поиск всех натуральных n-значных чисел, цифры в которых образуют строго возрастающую последовательность
-		Inp.Num_search( Num_min, Num_max );
+		Task_4_15_res.Num_search( Num_min, Num_max );
 		
 	}
 	

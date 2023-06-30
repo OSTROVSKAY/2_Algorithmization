@@ -1,14 +1,12 @@
 	
 package Task_4_4;
 	
-import java.util.ArrayList;
-	
 import java.util.Scanner;
 	
 public class Task_4_4_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -41,7 +39,7 @@ public class Task_4_4_res {
 	
 	
 	// Ввод данных
-	public double InputDouble() {
+	public static double InputDouble() {
 		
 		int check = 1;
 		double x = 0;
@@ -65,7 +63,7 @@ public class Task_4_4_res {
 					System.out.println("------------------------------------------");
 					}
 					
-				
+					
 			} while ( check == 0 );
 			
 			return x;
@@ -73,7 +71,7 @@ public class Task_4_4_res {
 	
 	
 	// Вычисление расстояния между ДВУМЯ точками
-	public double distance( double x_a, double x_b, double y_a, double y_b) {
+	public static double distance( double x_a, double x_b, double y_a, double y_b) {
 		
 		double dist = Math. sqrt( Math.pow( ( x_b - x_a ), 2) + Math.pow( ( y_b - y_a ), 2) );
 		

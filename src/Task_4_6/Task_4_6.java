@@ -8,13 +8,11 @@ package Task_4_6;
 public class Task_4_6 {
 	
 	public static void main(String[] args) {
-	
+		
 		System.out.println("--------------------------------------------------");
 		System.out.println("ПРОГРАММА : ЯВЛЯЮТСЯ ЛИ ТРИ ЧИСЛА ВЗАИМНО ПРОСТЫМИ");
 		System.out.println("--------------------------------------------------");
 		System.out.println("--------------------------------------------------");
-		
-		Task_4_6_res Inp = new Task_4_6_res();
 		
 		// Ввод четырёх натуральных чисел
 		System.out.println("-----------------------------");
@@ -28,7 +26,7 @@ public class Task_4_6 {
 		int A = 0;
 		
 		do {
-			A = Inp.InputInt();
+			A = Task_4_6_res.InputInt();
 			
 			if ( A <= 0 )
 				{
@@ -47,7 +45,7 @@ public class Task_4_6 {
 		int B = 0;
 		
 		do {
-			B = Inp.InputInt();
+			B = Task_4_6_res.InputInt();
 			
 			if ( B <= 0 )
 				{
@@ -66,7 +64,7 @@ public class Task_4_6 {
 		int C = 0;
 		
 		do {
-			C = Inp.InputInt();
+			C = Task_4_6_res.InputInt();
 			
 			if ( C <= 0 )
 				{
@@ -78,9 +76,9 @@ public class Task_4_6 {
 			} while ( C <= 0 );
 		
 		
-		int NOD1 = Inp.Nod3(A, B);
+		int NOD1 = Task_4_6_res.Nod3(A, B);
 		
-		int NOD2 = Inp.Nod3(NOD1, C);
+		int NOD2 = Task_4_6_res.Nod3(NOD1, C);
 		
 		if ( NOD2 == 1 )
 			{
@@ -90,7 +88,6 @@ public class Task_4_6 {
 			}
 			
 			else
-			
 				{
 				System.out.println("------------------------------------------------------------------------------");
 				System.out.println("ТРИ ЧИСЛА НЕ ЯВЛЯЮТСЯ ВЗАИМНО ПРОСТЫМИ. НАИБОЛЬШИЙ ОБЩИЙ ДЕЛИТЕЛЬ РАВЕН : " + NOD2);

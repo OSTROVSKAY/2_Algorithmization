@@ -15,8 +15,6 @@ public class Task_4_14 {
 		System.out.println("ПРОГРАММА : ПОИСК ЧИСЕЛ АРМСТРОНГА");
 		System.out.println("----------------------------------");
 		
-		Task_4_14_res Inp = new Task_4_14_res();
-		
 		// Ввод натурального числа K
 		System.out.println("Введите натуральное число : K");
 		System.out.println("-----------------------------");
@@ -24,7 +22,7 @@ public class Task_4_14 {
 		int K = 0;
 		
 		do {
-			K = Inp.InputInt();
+			K = Task_4_14_res.InputInt();
 			
 			if ( K <= 0 )
 				{
@@ -45,9 +43,9 @@ public class Task_4_14 {
 		
 		for ( int i = 1; i <= K; i++ ) {
 			
-			int Count = Inp.Count(i);
+			int Count = Task_4_14_res.Count(i);
 			
-			int Arm = Inp.Sum ( i, Count );
+			int Arm = Task_4_14_res.Sum ( i, Count );
 			
 			if ( Arm == i ) {
 				

@@ -23,8 +23,6 @@ public class Task_4_4 {
 		System.out.println("Ввод количества точек : n");
 		System.out.println("-------------------------");
 		
-		Task_4_4_res Inp = new Task_4_4_res();
-		
 		// Ввод количества точек
 		System.out.println("Введите количество точек : n");
 		System.out.println("----------------------------");
@@ -32,7 +30,7 @@ public class Task_4_4 {
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_4_4_res.InputInt();
 			
 			if ( N <= 0 )
 				{
@@ -63,10 +61,10 @@ public class Task_4_4 {
 				System.out.println("-----------------------------------------------------");
 				
 				System.out.print("Координата X : ");
-				X[i] = Inp.InputDouble();
+				X[i] = Task_4_4_res.InputDouble();
 				
 				System.out.print("Координата Y : ");
-				Y[i] = Inp.InputDouble();
+				Y[i] = Task_4_4_res.InputDouble();
 				
 				System.out.println("-----------------------------------------------------");
 				
@@ -87,7 +85,7 @@ public class Task_4_4 {
 				
 				if ( i != j & X[i] != X[j] & Y[i] != Y[j] ) {
 					
-					dist = Inp.distance( X[i], X[j], Y[i], Y[j]);
+					dist = Task_4_4_res.distance( X[i], X[j], Y[i], Y[j]);
 					
 					first_point.add(i);
 					

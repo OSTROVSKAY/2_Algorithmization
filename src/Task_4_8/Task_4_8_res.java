@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_4_8_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -34,26 +34,28 @@ public class Task_4_8_res {
 					
 				} while ( check == 0 );
 				
-				return x;
-			}
+			return x;
+		}
 		
 		
 	// Заполнение одномерного массива рандомно
 	public static int[] WriteMass ( int[] array ) {
+		
+		for ( int i = 0; i < array.length; i++ ) {
 			
-			for ( int i = 0; i < array.length; i++ ) {
-				
-				array[i] = -100 + (int) ( Math.random()*(100-(-100)) );
-				
-			}
+			array[i] = -100 + (int) ( Math.random()*(100-(-100)) );
+			
+		}
+		
 		return array;
 	}
 	
 	
 	// Вывод массива на печать
-	public void PrintMass ( int array[]) {
-		for ( int i = 0; i < array.length; i++) {
-			
+	public static void PrintMass ( int array[]) {
+		
+		for ( int i = 0; i < array.length; i++)
+			{
 			System.out.println("---------------------------------------------------------------------");
 			System.out.printf( "Номер элемента массива : %2d  ||  Значение элемента массива : %4d%n", i, array[i] );
 			// System.out.println("Номер элемента массива :  " +  i + "  ||  " + "Значение элемента массива :  " + nums[i] );
@@ -65,7 +67,7 @@ public class Task_4_8_res {
 	
 	
 	// Вычисление сумм трёх последовательно расположенных элементов массива с номерами от k до m
-	public void SummMass ( int array[], int K, int M) {
+	public static void SummMass ( int array[], int K, int M) {
 		
 		if( K <= array.length & M <= array.length & M > K &  ( ( M - K) + 1 ) % 3 == 0 & K != M ) {
 			
@@ -87,19 +89,18 @@ public class Task_4_8_res {
 				
 				System.out.printf( "Строка № : %1d  Элементы массива : ", count);
 				
-			// System.out.print("Строка № : " + count + "  " + "Элементы массива :  ");
+				// System.out.print("Строка № : " + count + "  " + "Элементы массива :  ");
 				
-				for ( int j = K2; j < K2 + 3; j++) {
-					
+				for ( int j = K2; j < K2 + 3; j++)
+					{
 					System.out.printf( "%4d  (%2d) ", array[j], j);
-				// System.out.print(array[j] + " (" + j + " ) ");
+					// System.out.print(array[j] + " (" + j + " ) ");
 					
 					sum = sum + array[j];
+					}
 					
-				}
-				
 				System.out.printf( " ||  СУММА : %4d", sum );
-			// System.out.print("  СУММА : " + sum);
+				// System.out.print("  СУММА : " + sum);
 				
 				System.out.println("");
 				
@@ -114,82 +115,77 @@ public class Task_4_8_res {
 			}
 			
 		}
-			else if ( K == M ) {
-				
+			else if ( K == M )
+				{
 				System.out.println("---------------------------------------------------------------------------------");
 				System.out.println("Номер Начального элемента массива - k равен номеру Конечного элемента массива - m");
 				System.out.println("---------------------------------------------------------------------------------");
-			}
-			
-			else if (K > array.length | M > array.length) {
+				}
 				
+			else if (K > array.length | M > array.length)
+				{
 				System.out.println("-------------------------------------------------");
 				System.out.println("Введённый номер элемента превышает размер массива");
 				System.out.println("-------------------------------------------------");
+				}
 				
-			}
-			
-			else if ( ( ( M - K) + 1 ) % 3 != 0 ) {
-				
+			else if ( ( ( M - K) + 1 ) % 3 != 0 )
+				{
 				System.out.println("-----------------------------------------------------");
 				System.out.println("Выбранное количество элементов массива не кратно ТРЁМ");
 				System.out.println("-----------------------------------------------------");
-				
-			}
+				}
 	}
 	
 	
 	// Вычисление сумм трёх последовательно расположенных элементов массива
-	public void SummMass1 ( int array[], int K, int M, int L) {
-		
-		int K1 = K - 1;
+	public static void SummMass1 ( int array[], int K, int M, int L) {
 		
 		int L1 = L - 1;
 		
 		int sum;
 		
-		if( K <= array.length & M <= array.length & M > K  & K != M & L >= K & (L+3) <= M) {
-			
+		if( K <= array.length & M <= array.length & M > K  & K != M & L >= K & (L+3) <= M)
+			{
 			sum = array[L1] + array[L1+1] + array[L1+2];
 			
 			System.out.printf( "%4d (%2d)  %4d (%2d)  %4d (%2d)  ||  СУММА : %4d",array[L1], L1, array[L1+1], (L1+1), array[L1+2], (L1+2), sum );
 			System.out.println("");
 			System.out.println("---------------------------------------------------");
-		}
-		
-			else if ( K == M ) {
-				
+			}
+			
+			else if ( K == M )
+				{
 				System.out.println("---------------------------------------------------------------------------------");
 				System.out.println("Номер Начального элемента массива - k равен номеру Конечного элемента массива - m");
 				System.out.println("---------------------------------------------------------------------------------");
-			}
-			
-			else if (K > array.length | M > array.length) {
+				}
 				
+			else if (K > array.length | M > array.length)
+				{
 				System.out.println("-------------------------------------------------");
 				System.out.println("Введённый номер элемента превышает размер массива");
 				System.out.println("-------------------------------------------------");
+				}
 				
-			}
-			
-			else if (M < K) {
-				
+			else if (M < K)
+				{
 				System.out.println("--------------------------------------------------------------------------------------------------------");
 				System.out.println("Значение номера Начального элемента массива - k превышает Значение номера Конечного элемента массива - m");
 				System.out.println("--------------------------------------------------------------------------------------------------------");
-			}
-			
-			else if (L < K | (L+3) > M) {
+				}
 				
+			else if (L < K | (L+3) > M)
+				{
 				System.out.println("------------------------------------------------------------------------------------------------------------------");
 				System.out.println("Номер элемента массива для вычисления суммы трёх последовательно расположенных элементов массива задан неправильно");
 				System.out.println("------------------------------------------------------------------------------------------------------------------");
-			}
+				}
 	}
 	
 	
 	// Повторная работа программы
-	public int Repeat() {
+	public static int Repeat() {
 		
 		int check = 0;
 		

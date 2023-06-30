@@ -10,7 +10,7 @@ public class Task_4_10_res {
 	// Натуральные числа — числа, возникающие естественным образом при счёте (1, 2, 3, 4, 5, 6, 7 и так далее)
 	
 	// Ввод данных
-	public double InputDouble() {
+	public static double InputDouble() {
 		
 		int check = 1;
 		int check1 = 0;
@@ -61,6 +61,7 @@ public class Task_4_10_res {
 				System.out.println("Данные введены не правильно. Введите снова");
 				System.out.println("------------------------------------------");
 				}
+			
 			} while ( check == 0 | check1 > 0 );
 			
 			return x;
@@ -68,7 +69,7 @@ public class Task_4_10_res {
 	
 	
 	// Метод для формирования массива, элементами которого являются цифры числа N
-	public ArrayList numberEnter( double A ){
+	public static ArrayList<Integer> numberEnter( double A ) {
 		
 		ArrayList<Integer> array = new ArrayList<Integer>();
 			
@@ -85,6 +86,7 @@ public class Task_4_10_res {
 			i++;
 			
 			}
+			
 		return array;
 	}
 	

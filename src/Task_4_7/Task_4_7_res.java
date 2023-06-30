@@ -9,7 +9,7 @@ public class Task_4_7_res {
 	Например, факториал числа 5 равен произведению : 1 * 2 * 3 * 4 * 5 = 120.
 	*/
 	
-	public int Factorial ( int x ) {
+	public static int Factorial ( int x ) {
 		
 		int fact = 1;
 		

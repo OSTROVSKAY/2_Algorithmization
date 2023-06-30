@@ -20,8 +20,6 @@ public class Task_4_5 {
 	System.out.println("Ввод размера массива : N");
 	System.out.println("------------------------");
 	
-	Task_4_5_res Inp = new Task_4_5_res();
-	
 	// Ввод количества точек
 	System.out.println("Введите размер массива : N");
 	System.out.println("--------------------------");
@@ -29,7 +27,7 @@ public class Task_4_5 {
 	int N = 0;
 	
 	do {
-		N = Inp.InputInt();
+		N = Task_4_5_res.InputInt();
 		
 		if ( N <= 0 )
 			{
@@ -45,22 +43,22 @@ public class Task_4_5 {
 	double A[] = new double[N];
 	
 	// Заполнение одномерного массива рандомно
-	A = Inp.WriteMass(A);
+	A = Task_4_5_res.WriteMass(A);
 	
 	// Вывод первоначального массива на печать
 	System.out.println("-----------------------------------------");
 	System.out.println("Вывод первоначального массива на печать :");
 	System.out.println("-----------------------------------------");
-	Inp.PrintMass(A);
+	Task_4_5_res.PrintMass(A);
 	
 	// СОРТИРОВКА МАССИВА ПО ВОЗРАСТАНИЮ СПОСОБОМ ВСТАВОК
-	Inp.SortMass(A);
+	Task_4_5_res.SortMass(A);
 	
 	// Вывод сортированного массива методом вставок на печать
 	System.out.println("--------------------------------------------------------");
 	System.out.println("Вывод сортированного массива методом вставок на печать :");
 	System.out.println("--------------------------------------------------------");
-	Inp.PrintMass(A);
+	Task_4_5_res.PrintMass(A);
 	
 	// Вывод на печать числа, которое меньше максимального элемента массива, но больше всех других элементов.
 	

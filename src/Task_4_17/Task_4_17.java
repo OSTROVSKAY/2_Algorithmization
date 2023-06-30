@@ -17,8 +17,6 @@ public class Task_4_17 {
 		System.out.println("-------------------------------------------------------");
 		System.out.println("-------------------------------------------------------");
 		
-		Task_4_17_res Inp = new Task_4_17_res();
-		
 		// Ввод заданного натурального числа N
 		System.out.println("Введите натуральное число : N");
 		System.out.println("-----------------------------");
@@ -26,7 +24,7 @@ public class Task_4_17 {
 		double N = 0;
 		
 		do {
-			N = Inp.InputDouble();
+			N = Task_4_17_res.InputDouble();
 			
 			if ( N <= 0 )
 				{
@@ -36,12 +34,12 @@ public class Task_4_17 {
 				}
 				
 			} while ( N <= 0 );
-		
+			
 /*
 	Из заданного числа вычитается сумма его цифр. Из результата вновь вычитается сумма цифр числа и так далее до получения нуля.
 	Расчёт количества этих действий.
 */
-	Inp.Subtraction(N);
+	Task_4_17_res.Subtraction(N);
 	
 	}
 	

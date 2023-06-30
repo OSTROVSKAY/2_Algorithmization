@@ -15,8 +15,6 @@ public class Task_4_9 {
 		System.out.println("-----------------------------------------------");
 		System.out.println("-----------------------------------------------");
 		
-		Task_4_9_res Inp = new Task_4_9_res ();
-		
 		// Ввод длин ЧЕТЫРЁХ сторон четырёхугольника : X, Y, Z, Т
 		System.out.println("--------------------------------------------------------");
 		System.out.println("Ввод длин ЧЕТЫРЁХ сторон четырёхугольника - X, Y, Z, Т :");
@@ -32,7 +30,7 @@ public class Task_4_9 {
 		double X = 0;
 		
 		do {
-			X = Inp.InputDouble();
+			X = Task_4_9_res.InputDouble();
 				
 				if ( X <= 0 )
 					{
@@ -52,7 +50,7 @@ public class Task_4_9 {
 		double Y = 0;
 		
 		do {
-			Y = Inp.InputDouble();
+			Y = Task_4_9_res.InputDouble();
 				
 				if ( Y <= 0 )
 					{
@@ -72,7 +70,7 @@ public class Task_4_9 {
 		double Z = 0;
 		
 		do {
-			Z = Inp.InputDouble();
+			Z = Task_4_9_res.InputDouble();
 				
 				if ( Z <= 0 )
 					{
@@ -85,14 +83,14 @@ public class Task_4_9 {
 		
 		
 		// Ввод длины ЧЕТВЁРТОЙ стороны четырехугольника : Т
-		System.out.println("--------------------------------------------------");
-		System.out.println("Введите длину ТРЕТЬЕЙ стороны четырёхугольника : Т");
-		System.out.println("--------------------------------------------------");
+		System.out.println("----------------------------------------------------");
+		System.out.println("Введите длину ЧЕТВЁРТОЙ стороны четырёхугольника : Т");
+		System.out.println("----------------------------------------------------");
 		
 		double T = 0;
 		
 		do {
-			T = Inp.InputDouble();
+			T = Task_4_9_res.InputDouble();
 				
 				if ( T <= 0 )
 					{
@@ -134,43 +132,42 @@ public class Task_4_9 {
 		System.out.println("-------------------------------------");
 		
 		// Если четырёхугольник - КВАДРАТ
-		if ( X == Y & X == Z & X == T & Y == Z & Y == T & Z == T ) {
-			
-			double S1 = Inp.Square_area( X, Y );
+		if ( X == Y & X == Z & X == T & Y == Z & Y == T & Z == T )
+			{
+			double S1 = Task_4_9_res.Square_area( X, Y );
 			
 			System.out.println("-----------------------------------------------------------------");
 			System.out.printf("Вид четырёхугольника - КВАДРАТ. Площадь КВАДРАТА равна :  %6.3f%n", S1);
 			System.out.println("-----------------------------------------------------------------");
+			}
 			
-		}
-		
-		else if ( X == T & Z == Y ) {
-			
-			double S2 = Inp.Square_area( X, Y );
+		else if ( X == T & Z == Y )
+			{
+			double S2 = Task_4_9_res.Square_area( X, Y );
 			
 			System.out.println("------------------------------------------------------------------------------");
 			System.out.printf("Вид четырёхугольника - ПРЯМОУГОЛЬНИК. Площадь ПРЯМОУГОЛЬНИКА равна :  %6.3f%n", S2);
 			System.out.println("------------------------------------------------------------------------------");
-		}
-		
-		else if ( T > X  ) {
+			}
 			
+		else if ( T > X )
+			{
 			double TX = T - X;
 			
-			double Z1 = Inp.hypotenuse(Y, TX);
+			double Z1 = Task_4_9_res.hypotenuse(Y, TX);
 			
-			if ( Z == Z1 ) {
-				
-				double S3 = Inp.Sq_rec_trap(X, T, Y);
+			if ( Z == Z1 )
+				{
+				double S3 = Task_4_9_res.Sq_rec_trap(X, T, Y);
 				
 				System.out.println("-----------------------------------------------------------------------------------------------");
 				System.out.printf("Вид четырёхугольника - ПРЯМОУГОЛЬНАЯ ТРАПЕЦИЯ. Площадь ПРЯМОУГОЛЬНОЙ ТРАПЕЦИИ равна :  %6.3f%n", S3);
 				System.out.println("-----------------------------------------------------------------------------------------------");
+				}
 				
-			}
-			else 
+				else
 				{
-				double S4 = Inp.quadrilateral( X, Y, Z, T);
+				double S4 = Task_4_9_res.quadrilateral( X, Y, Z, T);
 				
 				if ( S4 > 0)
 					{
@@ -178,45 +175,49 @@ public class Task_4_9 {
 					System.out.printf("Площадь ЧЕТЫРЁХУГОЛЬНИКА равна :  %6.3f%n", S4);
 					System.out.println("------------------------------------------");
 					}
-				else {
+				else
+					{
 					System.out.println("---------------------------------------------");
 					System.out.println("Площадь ЧЕТЫРЁХУГОЛЬНИКА вычислить невозможно");
 					System.out.println("---------------------------------------------");
 					}
 				}
-		}
-		
-		else if ( X > T ) {
-			
-			double XT = X - T;
-			
-			double Z2 = Inp.hypotenuse(Y, XT);
-			
-			if ( Z == Z2 ) {
-				
-				double S4 = Inp.Sq_rec_trap(T, X, Y);
-				
-				System.out.println("-----------------------------------------------------------------------------------------------");
-				System.out.printf("Вид четырёхугольника - ПРЯМОУГОЛЬНАЯ ТРАПЕЦИЯ. Площадь ПРЯМОУГОЛЬНОЙ ТРАПЕЦИИ равна :  %6.3f%n", S4);
-				System.out.println("-----------------------------------------------------------------------------------------------");
-				
 			}
-			else 
+			
+			else if ( X > T )
 				{
-				double S5 = Inp.quadrilateral( X, Y, Z, T);
+				double XT = X - T;
 				
-				if ( S5 > 0) {
-					System.out.println("------------------------------------------");
-					System.out.printf("Площадь ЧЕТЫРЁХУГОЛЬНИКА равна :  %6.3f%n", S5);
-					System.out.println("------------------------------------------");
+				double Z2 = Task_4_9_res.hypotenuse(Y, XT);
+				
+				if ( Z == Z2 )
+					{
+					double S4 = Task_4_9_res.Sq_rec_trap(T, X, Y);
+					
+					System.out.println("-----------------------------------------------------------------------------------------------");
+					System.out.printf("Вид четырёхугольника - ПРЯМОУГОЛЬНАЯ ТРАПЕЦИЯ. Площадь ПРЯМОУГОЛЬНОЙ ТРАПЕЦИИ равна :  %6.3f%n", S4);
+					System.out.println("-----------------------------------------------------------------------------------------------");
 					}
-				else {
-					System.out.println("---------------------------------------------");
-					System.out.println("Площадь ЧЕТЫРЁХУГОЛЬНИКА вычислить невозможно");
-					System.out.println("---------------------------------------------");
+					
+				else
+					{
+					double S5 = Task_4_9_res.quadrilateral( X, Y, Z, T);
+					
+					if ( S5 > 0)
+						{
+						System.out.println("------------------------------------------");
+						System.out.printf("Площадь ЧЕТЫРЁХУГОЛЬНИКА равна :  %6.3f%n", S5);
+						System.out.println("------------------------------------------");
+						}
+						
+					else
+						{
+						System.out.println("---------------------------------------------");
+						System.out.println("Площадь ЧЕТЫРЁХУГОЛЬНИКА вычислить невозможно");
+						System.out.println("---------------------------------------------");
+						}
 					}
-				}
-		}
+			}
 		
 	}
 	

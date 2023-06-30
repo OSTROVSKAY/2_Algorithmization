@@ -6,8 +6,6 @@
 	
 package Task_4_16;
 	
-import java.util.ArrayList;
-	
 public class Task_4_16 {
 	
 	public static void main(String[] args) {
@@ -17,8 +15,6 @@ public class Task_4_16 {
 		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("----------------------------------------------------------------------------");
 		
-		Task_4_16_res Inp = new Task_4_16_res();
-		
 		// Ввод натурального числа N : Число разрядов в n-значном числе
 		System.out.println("Введите число разрядов в n-значном числе : N");
 		System.out.println("--------------------------------------------");
@@ -26,7 +22,7 @@ public class Task_4_16 {
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_4_16_res.InputInt();
 			
 			if ( N <= 0 )
 				{
@@ -46,13 +42,13 @@ public class Task_4_16 {
 		double Num_min = (Math.pow(10, (N-1)));
 		
 		// Расчёт самого большого n-значного числа
-		double Num_max = Inp.Number(N);
+		double Num_max = Task_4_16_res.Number(N);
 		
 		System.out.printf("Самое малое n-значное число : %7.0f   Самое большое n-значное число :  %7.0f   Количество разрядов в числе : %2d%n", Num_min, Num_max, N );
 		System.out.println("---------------------------------------------------------------------------------------------------------------------");
 		
 		// Расчёт суммы n - значных чисел, содержащих только нечетные цифры. Подсчёт чётных цифр в найденной сумме
-		Inp.Calculation(Num_min, Num_max);
+		Task_4_16_res.Calculation(Num_min, Num_max);
 	}
 	
 }

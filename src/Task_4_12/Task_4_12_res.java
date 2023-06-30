@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Task_4_12_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -34,12 +34,12 @@ public class Task_4_12_res {
 					
 				} while ( check == 0 );
 				
-				return x;
-			}
+			return x;
+		}
 		
 		
 	// Вычисление суммы цифр в числе
-	public int Sum ( int number ) {
+	public static int Sum ( int number ) {
 		
 		int sum = 0;
 		

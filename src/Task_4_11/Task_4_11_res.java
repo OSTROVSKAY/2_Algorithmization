@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Task_4_11_res {
 	
 	// Ввод данных 1
-	public double InputDouble() {
+	public static double InputDouble() {
 		
 		int check = 1;
 		
@@ -52,22 +52,22 @@ public class Task_4_11_res {
 						}
 						
 					System.out.println("----------------------------------------");
-			}
-			
-				else
-					{
-					System.out.println("------------------------------------------");
-					System.out.println("Данные введены не правильно. Введите снова");
-					System.out.println("------------------------------------------");
-					}
-				} while ( check == 0 | check1 > 0 );
+			}		
+			else
+				{
+				System.out.println("------------------------------------------");
+				System.out.println("Данные введены не правильно. Введите снова");
+				System.out.println("------------------------------------------");
+				}
 				
+			} while ( check == 0 | check1 > 0 );
+			
 			return x;
 		}
 	
 	
 	// Ввод данных 2
-	public String InputString() {
+	public static String InputString() {
 		
 		int check = 1;
 		
@@ -127,7 +127,7 @@ public class Task_4_11_res {
 	
 	
 	// Метод для формирования массива, элементами которого являются цифры числа N
-	public ArrayList numberEnter( double A ){
+	public static ArrayList<Integer> numberEnter( double A ) {
 		
 		ArrayList<Integer> array = new ArrayList<Integer>();
 			
@@ -144,12 +144,13 @@ public class Task_4_11_res {
 			i++;
 			
 			}
+			
 		return array;
 	}
 	
 	
 	// Вывод числа на печать по отдельной цифре
-	public void PrintString( String a ) {
+	public static void PrintString( String a ) {
 		
 		System.out.print("[");
 		
@@ -160,6 +161,7 @@ public class Task_4_11_res {
 		}
 		
 		System.out.print("]");
+		
 		System.out.println("");
 		
 	}

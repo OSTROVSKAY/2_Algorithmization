@@ -1,14 +1,12 @@
 	
 package Task_4_17;
 	
-import java.util.ArrayList;
-	
 import java.util.Scanner;
 	
 public class Task_4_17_res {
 	
 	// Ввод данных
-	public double InputDouble() {
+	public static double InputDouble() {
 		
 		int check = 1;
 		int check1 = 0;
@@ -51,26 +49,28 @@ public class Task_4_17_res {
 						}
 						
 					System.out.println("-----------------------------------");
-			}
-			
-			else 
+				}
+				
+			else
 				{
 				System.out.println("------------------------------------------");
 				System.out.println("Данные введены не правильно. Введите снова");
 				System.out.println("------------------------------------------");
 				}
+				
 			} while ( check == 0 | check1 > 0 );
 			
-			return x;
-		}
+		return x;
+		
+	}
 	
 	
 	// Сумма цифр заданного числа N
-	public double SumNumber( double N ){
+	public static double SumNumber( double N ) {
 			
 			double Sum = 0;
 			
-			while(N > 0) {
+			while (N > 0) {
 				
 				double temp = N % 10;
 				
@@ -81,14 +81,14 @@ public class Task_4_17_res {
 				}
 				
 				return Sum;
-			}
+		}
 		
 	
 /*
 	Из заданного числа вычитается сумма его цифр. Из результата вновь вычитается сумма цифр числа и так далее до получения нуля.
 	Расчёт количества этих действий.
 */
-	public void Subtraction( double N ) {
+	public static void Subtraction( double N ) {
 		
 		int count = 0;
 		
@@ -100,7 +100,7 @@ public class Task_4_17_res {
 			
 			System.out.println("------------------------------------------------------------------------------------------------------");
 			
-			System.out.printf("Номер вычитания : %3d  Число : %4d  Сумма цифр числа : %3d  Разность числа и суммы цифр числа : %3d%n", count, (int)N , (int)Sum , (int)(N -Sum) );
+			System.out.printf("Номер вычитания : %3d  Число : %4d  Сумма цифр числа : %3d  Разность числа и суммы цифр числа : %3d%n", count, (int)N, (int)Sum, (int)(N -Sum) );
 			//System.out.println("Число : " + (int)N + "   " + "Сумма цифр числа : " + (int)Sum + "   " + "Разность числа и суммы цифр числа : " + (int)(N -Sum));
 			
 			N = N - Sum;

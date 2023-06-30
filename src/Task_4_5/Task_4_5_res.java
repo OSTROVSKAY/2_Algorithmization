@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Task_4_5_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -43,7 +43,7 @@ public class Task_4_5_res {
 	
 	
 	// Заполнение одномерного массива
-	public double[] WriteMass ( double array[]) {
+	public static double[] WriteMass ( double array[]) {
 		
 		// Заполнение двумерного массива
 		double value = 0;
@@ -56,6 +56,7 @@ public class Task_4_5_res {
 			result = result.setScale(3, RoundingMode.UP );
 			array[i] = result.doubleValue();
 			}
+			
 		return array;
 	}
 	
@@ -63,7 +64,7 @@ public class Task_4_5_res {
 	// СОРТИРОВКА МАССИВА ПО ВОЗРАСТАНИЮ СПОСОБОМ ВСТАВОК
 	// Сортировка вставками является устойчивой. Одинаковые элементы последовательности не меняют свой порядок.
 	
-	public double[] SortMass ( double array[]) {
+	public static double[] SortMass ( double array[]) {
 		
 		for (int left = 0; left < array.length; left++) {
 			
@@ -74,6 +75,7 @@ public class Task_4_5_res {
 			// Перемещение по элементам, которые стоят перед полученным элементом
 			
 			int i = 0;
+			
 			for (i = left - 1; i >= 0; i--) {
 				
 				// Если получено значение меньшее — передвигается больший элемент дальше
@@ -97,7 +99,8 @@ public class Task_4_5_res {
 	
 	
 	// Вывод массива на печать
-	public void PrintMass ( double array[]) {
+	public static void PrintMass ( double array[]) {
+		
 		for ( int i = 0; i < array.length; i++) {
 			
 			System.out.println("---------------------------------------------------------------------");
@@ -105,7 +108,7 @@ public class Task_4_5_res {
 			// System.out.println("Номер элемента массива :  " +  i + "  ||  " + "Значение элемента массива :  " + nums[i] );
 			System.out.println("---------------------------------------------------------------------");
 			}
-		
+			
 		System.out.println("---------------------------------------------------------------------");
 	}
 	

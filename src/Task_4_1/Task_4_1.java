@@ -15,8 +15,6 @@ public class Task_4_1 {
 		System.out.println("--------------------------------");
 		System.out.println("--------------------------------");
 		
-		Task_4_1_res Inp = new Task_4_1_res();
-		
 		// Ввод двух натуральных чисел
 		System.out.println("Введите ПЕРВОЕ натуральное число : A");
 		System.out.println("------------------------------------");
@@ -24,7 +22,7 @@ public class Task_4_1 {
 		int A = 0;
 		
 		do {
-			A = Inp.InputInt();
+			A = Task_4_1_res.InputInt();
 			
 		if ( A <= 0 )
 			{
@@ -42,7 +40,7 @@ public class Task_4_1 {
 		int B = 0;
 		
 		do {
-			B = Inp.InputInt();
+			B = Task_4_1_res.InputInt();
 			
 		if ( B <= 0 )
 			{
@@ -57,11 +55,11 @@ public class Task_4_1 {
 		// Вычисление наибольшего общего делителя и наименьшего общего кратного двух натуральных чисел
 		
 		// Вычисление наибольшего общего делителя
-		int NOD = Inp.Nod1(A,B);
+		int NOD = Task_4_1_res.Nod1(A,B);
 		
 		// Вычисление наименьшего общего кратного
 		
-		int NOK = Inp.Nok1(A, B);
+		int NOK = Task_4_1_res.Nok1(A, B);
 		
 		// int NOK = Inp.lcm2(A, B);
 		

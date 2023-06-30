@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Task_4_15_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -25,13 +25,13 @@ public class Task_4_15_res {
 				x = Integer.parseInt(xx);
 				}
 				catch (NumberFormatException e) {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-			}
-			
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 			System.out.println("--------------------------------------");
 				
 				} while ( check == 0 );
@@ -40,8 +40,8 @@ public class Task_4_15_res {
 		}
 	
 	
-	// Получение  n-значного числа
-	public double Number ( int N ) {
+	// Получение n-значного числа
+	public static double Number ( int N ) {
 		
 		double Num = 0;
 		
@@ -56,7 +56,7 @@ public class Task_4_15_res {
 	
 	
 	// Метод для формирования массива, элементами которого являются цифры числа N
-	public ArrayList numberEnter( double A ){
+	public static ArrayList<Integer> numberEnter( double A ) {
 		
 		ArrayList<Integer> array = new ArrayList<Integer>();
 			
@@ -74,19 +74,21 @@ public class Task_4_15_res {
 			
 			}
 			return array;
+			
 		}
 		
 		
 		// Поиск всех натуральных n-значных чисел, цифры в которых образуют строго возрастающую последовательность
-		public int Asc_Seq( ArrayList array) {
+		public static int Asc_Seq( ArrayList<Integer> array) {
 			
 			int check = 0;
 			
 			for ( int i = 0; i < array.size()-1; i++ ) {
 				
-				int diff =(int)array.get(i+1) - (int)array.get(i);
+				int diff = (int)array.get(i+1) - (int)array.get(i);
 				
 				if ( diff != 1 ) {
+					
 					check++;
 				}
 			}
@@ -96,14 +98,14 @@ public class Task_4_15_res {
 		
 		
 		// Поиск всех натуральных n-значных чисел, цифры в которых образуют строго возрастающую последовательность
-		public void Num_search( double Num_min, double Num_max) {
+		public static void Num_search( double Num_min, double Num_max) {
 			
 			System.out.println("----------------------------------------------------------------------------------------------------------");
 			System.out.print("Числа, цифры в которых образуют строго возрастающую последовательность : ");
 			
 			for ( double i = Num_min; i <= Num_max; i++) {
 				
-				ArrayList array = numberEnter(i);
+				ArrayList<Integer> array = numberEnter(i);
 				
 				int check = Asc_Seq(array);
 				

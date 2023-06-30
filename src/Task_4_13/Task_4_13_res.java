@@ -16,7 +16,7 @@ public class Task_4_13_res {
 */
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -28,7 +28,7 @@ public class Task_4_13_res {
 			String xx = scanner.nextLine();
 			
 			check = 1;
-				
+					
 				try {
 					x = Integer.parseInt(xx);
 					}
@@ -44,26 +44,28 @@ public class Task_4_13_res {
 					
 				} while ( check == 0 );
 				
-				return x;
-			}
+			return x;
+		}
 		
-	
+		
 	// Расчёт и печать всех пар «чисел - близнецов» на отрезке [n,2n], где n - заданное натуральное число больше 2
-	public void PrintPair( int N, int N1 ) {
+	public static void PrintPair( int N, int N1 ) {
 		
 		for ( int i = N; i <= N1; i++ ) {
 			
-			if ( i + 2 <= N1 ) {
-				
+			if ( i + 2 <= N1 )
+				{
 				System.out.println("---------------------------------------");
 				System.out.println("Пары чисел-близнецов : " + i + " и " + (i +2));
-			}
-			else {
+				}
 				
+				else
+				{
 				System.out.println("---------------------------------------");
 				System.out.println("Для числа : " + i + "  " + "Нет числа близнеца");
-			}
+				}
 		}
+		
 		System.out.println("---------------------------------------");
 	}
 	
