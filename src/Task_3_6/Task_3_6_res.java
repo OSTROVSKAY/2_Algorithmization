@@ -2,13 +2,15 @@
 package Task_3_6;
 	
 import java.math.BigDecimal;
+	
 import java.math.RoundingMode;
+	
 import java.util.Scanner;
 	
 public class Task_3_6_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -25,20 +27,21 @@ public class Task_3_6_res {
 					x = Integer.parseInt(xx);
 					}
 					catch (NumberFormatException e) {
-					
-					check = 0;
-					System.out.println("------------------------------------------");
-					System.out.println("Данные введены не правильно. Введите снова");
-					System.out.println("------------------------------------------");
-				}
-				
+						
+						check = 0;
+						System.out.println("------------------------------------------");
+						System.out.println("Данные введены не правильно. Введите снова");
+						System.out.println("------------------------------------------");
+						}
+						
 				System.out.println("----------------------------------");
 				
 			} while ( check == 0 );
-			return x;
-		}
-		
-		
+			
+		return x;
+	}
+	
+	
 	// Заполнение одномерного массива рандомно
 	public static double[] WriteMass ( double[] array, int X ) {
 		
@@ -48,7 +51,9 @@ public class Task_3_6_res {
 		for ( int i = 0; i < X; i++ ) {
 			
 			value = -10 + ( Math.random() * (10 - (-10) ) );
+			
 			BigDecimal result = new BigDecimal(value);
+			
 			result = result.setScale(3, RoundingMode.UP );
 			
 			array[i] = result.doubleValue();
@@ -115,6 +120,7 @@ public class Task_3_6_res {
 		
 		do {
 			check = 0;
+			
 			i = 0;
 			
 			do {
@@ -122,7 +128,7 @@ public class Task_3_6_res {
 				temp = 0;
 				
 				if ( array[i] <= array[i+1] ) { i++; }
-				
+					
 					else {
 						
 						temp = array[i];
@@ -134,7 +140,7 @@ public class Task_3_6_res {
 						i = (i+1)-1;
 						}
 						
-			}while ( i < array.length-1);
+			} while ( i < array.length-1);
 			
 			
 			for ( int j = 0; j < array.length-1; j++ ) {
@@ -151,19 +157,23 @@ public class Task_3_6_res {
 		
 		return array;
 	}
-		
+	
+	
 	// Вывод на печать одномерного массива
-	public void PrintMass (double[] array) {
+	public static void PrintMass (double[] array) {
 		
 		System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		
 		for ( int i = 0; i < array.length; i++) {
 			
 			System.out.printf( "%5.3f ", array[i] );
+			
 			System.out.printf( "(%d)  ", i);
 			
-			}
-				
+		}
+		
 		System.out.println("");
+		
 		System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		}
 }

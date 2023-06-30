@@ -17,8 +17,6 @@ public class Task_3_3 {
 		System.out.println("--------------------------------------------------");
 		System.out.println("--------------------------------------------------");
 		
-		Task_3_3_res Inp = new Task_3_3_res();
-		
 		// Ввод одномерного массива
 		System.out.println("Ввод первого одномерного массива A[X] :");
 		System.out.println("---------------------------------------");
@@ -29,8 +27,8 @@ public class Task_3_3 {
 		int X = 0;
 		
 		do {
-			X = Inp.InputInt();
-		
+			X = Task_3_3_res.InputInt();
+			
 		if ( X <= 0 )
 			{
 			System.out.println("--------------------------------------------------");
@@ -44,13 +42,13 @@ public class Task_3_3 {
 		int A[] = new int[X];
 		
 		//Заполнение одномерного массива
-		A = Inp.WriteMass(A, X);
+		A = Task_3_3_res.WriteMass(A, X);
 		
 		// Вывод на печать НЕСОРТИРОВАННОГО массива
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("Вывод на печать НЕСОРТИРОВАННОГО массива. Размер массива : " + A.length);
 		System.out.println("--------------------------------------------------------------");
-		Inp.PrintMass(A);
+		Task_3_3_res.PrintMass(A);
 		
 		// СОРТИРОВКА МАССИВА
 		
@@ -69,12 +67,14 @@ public class Task_3_3 {
 			for ( int j = i; j < A.length; j++ ) {
 				
 				if ( A[j] > max ) {
+					
 					max = A[j]; indmax = j;
+					
 					}
 				}
 			
 			
-			if ( max != max1) { move++; }
+			if ( max != max1) { move ++; }
 			
 			A[i] = max;
 			A[indmax] = max1;
@@ -91,7 +91,7 @@ public class Task_3_3 {
 		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("Вывод на печать массива СОРТИРОВАННОГО МЕТОДОМ ВЫБОРА. Размер массива : " + A.length);
 		System.out.println("----------------------------------------------------------------------------");
-		Inp.PrintMass(A);
+		Task_3_3_res.PrintMass(A);
 		
 	}
 	

@@ -10,8 +10,7 @@ import java.util.Scanner;
 public class Task_3_2_res {
 	
 	// Ввод данных
-	
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -28,17 +27,18 @@ public class Task_3_2_res {
 				x = Integer.parseInt(xx);
 				}
 				catch (NumberFormatException e) {
-				
-				check = 0;
-				System.out.println("------------------------------------------");
-				System.out.println("Данные введены не правильно. Введите снова");
-				System.out.println("------------------------------------------");
-				}
-				
+					
+					check = 0;
+					System.out.println("------------------------------------------");
+					System.out.println("Данные введены не правильно. Введите снова");
+					System.out.println("------------------------------------------");
+					}
+					
 				System.out.println("----------------------------------");
 				
 			} while ( check == 0 );
-				return x;
+			
+			return x;
 		}
 	
 	
@@ -48,7 +48,9 @@ public class Task_3_2_res {
 		double value = 0;
 		
 		value = -10 + ( Math.random() * (10 - (-10) ) );
+		
 		BigDecimal result = new BigDecimal(value);
+		
 		result = result.setScale(3, RoundingMode.UP );
 		
 		array[0] = result.doubleValue();
@@ -60,7 +62,9 @@ public class Task_3_2_res {
 			
 			do {
 				value = -10 + ( Math.random() * (10 - (-10) ) );
+				
 				BigDecimal result1 = new BigDecimal(value);
+				
 				result1 = result1.setScale(3, RoundingMode.UP );
 				
 				array[i] = result1.doubleValue();
@@ -74,17 +78,21 @@ public class Task_3_2_res {
 	
 	
 	// Вывод на печать одномерного массива
-	public void PrintMass (double[] array) {
+	public static void PrintMass (double[] array) {
 		
 		System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		
 		for ( int i = 0; i < array.length; i++) {
 			
 			System.out.printf( "%5.3f ", array[i] );
+			
 			System.out.printf( "(%d)  ", i);
 			
 			}
 			
 		System.out.println("");
+		
 		System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		
 		}
 }

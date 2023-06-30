@@ -17,8 +17,6 @@ public class Task_3_4 {
 		System.out.println("-----------------------------------------------------");
 		System.out.println("-----------------------------------------------------");
 		
-		Task_3_4_res Inp = new Task_3_4_res();
-		
 		// Ввод одномерного массива
 		System.out.println("Ввод одномерного массива A[X] :");
 		System.out.println("-------------------------------");
@@ -29,8 +27,8 @@ public class Task_3_4 {
 		int X = 0;
 		
 		do {
-			X = Inp.InputInt();
-		
+			X = Task_3_4_res.InputInt();
+			
 		if ( X <= 0 )
 			{
 			System.out.println("--------------------------------------------------");
@@ -44,13 +42,13 @@ public class Task_3_4 {
 		int A[] = new int[X];
 		
 		//Заполнение одномерного массива
-		A = Inp.WriteMass(A, X);
+		A = Task_3_4_res.WriteMass(A, X);
 		
 		// Вывод на печать НЕСОРТИРОВАННОГО массива
 		System.out.println("--------------------------------------------------------------");
 		System.out.println("Вывод на печать НЕСОРТИРОВАННОГО массива. Размер массива : " + A.length);
 		System.out.println("--------------------------------------------------------------");
-		Inp.PrintMass(A);
+		Task_3_4_res.PrintMass(A);
 		
 		// СОРТИРОВКА МАССИВА ПО ВОЗРАСТАНИЮ СПОСОБОМ ОБМЕНА
 		int move = 0;
@@ -65,17 +63,20 @@ public class Task_3_4 {
 				temp = A[i];
 				temp1 = A[i+1];
 				
-				if ( A[i] > A[i+1] ) { A[i] = temp1; A[i+1] = temp; move++; };
+				if ( A[i] > A[i+1] ) { A[i] = temp1; A[i+1] = temp; move ++; };
 				
 				temp = A[i];
 				temp1 = A[i+1];
 				
 			}
 			
-			count = 0;
-			for ( int i = 0; i < A.length-1; i++ ) {
 			
-				if ( A[i] > A[i+1] ) {count++; };
+			count = 0;
+			
+			
+			for ( int i = 0; i < A.length-1; i++ ) {
+				
+				if ( A[i] > A[i+1] ) { count ++; };
 			}
 			
 			
@@ -89,7 +90,7 @@ public class Task_3_4 {
 		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("Вывод на печать СОРТИРОВАННОГО МАССИВА МЕТОДОМ ОБМЕНА. Размер массива : " + A.length);
 		System.out.println("----------------------------------------------------------------------------");
-		Inp.PrintMass(A);
+		Task_3_4_res.PrintMass(A);
 		
 	}
 	

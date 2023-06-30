@@ -1,14 +1,12 @@
 	
 package Task_3_8;
 	
-import java.util.ArrayList;
-	
 import java.util.Scanner;
 	
 public class Task_3_8_res {
 	
 	// Ввод данных
-	public int InputInt() {
+	public static int InputInt() {
 		
 		int check = 1;
 		int x = 0;
@@ -35,24 +33,26 @@ public class Task_3_8_res {
 				System.out.println("-----------------------------------");
 				
 		} while ( check == 0 );
+		
 		return x;
 	}
 	
 	
 	// Заполнение одномерного массива рандомно
 	public static int[] WriteMass ( int[] array, int X ) {
+		
+		for ( int i = 0; i < X; i++ ) {
 			
-			for ( int i = 0; i < X; i++ ) {
-				
-				array[i] = 1 + (int) ( Math.random()*(10-1) );
-				
-			}
+			array[i] = 1 + (int) ( Math.random()*(10-1) );
+			
+		}
+		
 		return array;
 	}
 	
 	
 	// Нахождение наибольшего общего делителя : НОД
-	public int Nod ( int a, int b ) {
+	public static int Nod ( int a, int b ) {
 		
 		int Nod = 0;
 		
@@ -70,7 +70,7 @@ public class Task_3_8_res {
 	
 	
 	// Нахождение наименьшего общего кратного : НОК
-	public int Nok ( int x, int y ) {
+	public static int Nok ( int x, int y ) {
 		
 		int Nok = 0;
 		
@@ -81,7 +81,7 @@ public class Task_3_8_res {
 	
 	
 	// Сортировка массива методом ВСТАВОК
-	public int[] SortMass (int array []) {
+	public static int[] SortMass (int array []) {
 		
 		for (int left = 0; left < array.length; left++) {
 			
@@ -92,6 +92,7 @@ public class Task_3_8_res {
 			// Перемещение по элементам, которые стоят перед полученным элементом
 			
 			int i = 0;
+			
 			for (i = left - 1; i >= 0; i--) {
 				
 				// Если получено значение меньшее — передвигается больший элемент дальше

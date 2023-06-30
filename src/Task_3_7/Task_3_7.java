@@ -1,9 +1,9 @@
 	
-	/*
-		7. Пусть даны две неубывающие последовательности действительных чисел : a1 <= a2 <= ... <= an и b1 <= b2 <= ... <= bm.
-			Требуется указать те места, на которые нужно вставлять элементы последовательности : b1 <= b2 <= ... <= bm в первую
-			последовательность так, чтобы новая последовательность оставалась возрастающей.
-	*/
+/*
+	7. Пусть даны две неубывающие последовательности действительных чисел : a1 <= a2 <= ... <= an и b1 <= b2 <= ... <= bm.
+	 Требуется указать те места, на которые нужно вставлять элементы последовательности : b1 <= b2 <= ... <= bm в первую
+	 последовательность так, чтобы новая последовательность оставалась возрастающей.
+*/
 	
 package Task_3_7;
 	
@@ -18,8 +18,6 @@ public class Task_3_7 {
 		System.out.println("--------------------------------------------------------");
 		System.out.println("--------------------------------------------------------");
 		
-		Task_3_7_res Inp = new Task_3_7_res();
-		
 		// Ввод ПЕРВОГО одномерного массива
 		System.out.println("Ввод ПЕРВОГО одномерного массива A[N] :");
 		System.out.println("---------------------------------------");
@@ -31,7 +29,7 @@ public class Task_3_7 {
 		int N = 0;
 		
 		do {
-			N = Inp.InputInt();
+			N = Task_3_7_res.InputInt();
 			
 		if ( N <= 0 )
 			{
@@ -54,7 +52,7 @@ public class Task_3_7 {
 		int M = 0;
 		
 		do {
-			M = Inp.InputInt();
+			M = Task_3_7_res.InputInt();
 			
 		if ( M <= 0 )
 			{
@@ -70,25 +68,25 @@ public class Task_3_7 {
 		double[] A = new double[N];
 		
 		// Запись ПЕРВОГО массива A[N]
-		A = Inp.WriteMass(A, N);
+		A = Task_3_7_res.WriteMass(A, N);
 		
 		// Объявление ВТОРОГО массива B[M]
 		double[] B = new double[M];
 		
 		// Запись ВТОРОГО массива A[N]
-		B = Inp.WriteMass(B, M);
+		B = Task_3_7_res.WriteMass(B, M);
 		
 		// Вывод на печать ПЕРВОГО массива
 		System.out.println("------------------------------------------------------");
 		System.out.println("Вывод на печать ПЕРВОГО массива. Размер массива : " + A.length);
 		System.out.println("------------------------------------------------------");
-		Inp.PrintMass(A);
+		Task_3_7_res.PrintMass(A);
 		
 		// Вывод на печать ВТОРОГО массива
 		System.out.println("------------------------------------------------------");
 		System.out.println("Вывод на печать ВТОРОГО массива. Размер массива : " + B.length);
 		System.out.println("------------------------------------------------------");
-		Inp.PrintMass(B);
+		Task_3_7_res.PrintMass(B);
 		
 		
 		// ПОИСК МЕСТ ДЛЯ ВСТАВКИ ЭЛЕМЕНТОВ ВТОРОЙ ПОСЛЕДОВАТЕЛЬНОСТИ В ПЕРВУЮ ПОСЛЕДОВАТЕЛЬНОСТЬ
@@ -97,11 +95,12 @@ public class Task_3_7 {
 		
 		try {
 			
-			finalSequence = Inp.merge(A, B);
+			finalSequence = Task_3_7_res.merge(A, B);
 			
 			// System.out.println("Финальная последовательность : " +  (finalSequence.toString().substring(1, finalSequence.toString().length() - 1)) );
 			
-			}catch( IllegalArgumentException e) {
+			} catch( IllegalArgumentException e) {
+				
 				System.out.println( e.getMessage() );
 		}
 		
@@ -111,7 +110,7 @@ public class Task_3_7 {
 		System.out.println("Вывод на печать ИТОГОВОГО массива. Размер массива : " +  finalSequence.size());
 		System.out.println("--------------------------------------------------------");
 		
-		Inp.PrintMass1(finalSequence);
+		Task_3_7_res.PrintMass1(finalSequence);
 		
 	}
 	

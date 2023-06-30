@@ -6,8 +6,7 @@ import java.util.Scanner;
 public class Task_3_1_res {
 	
 	// Ввод данных
-	
-	public int InputInt() {
+	public static int InputInt() {
 	
 	int check = 1;
 	int x = 0;
@@ -24,17 +23,19 @@ public class Task_3_1_res {
 			x = Integer.parseInt(xx);
 			}
 			catch (NumberFormatException e) {
-			
-			check = 0;
-			System.out.println("------------------------------------------");
-			System.out.println("Данные введены не правильно. Введите снова");
-			System.out.println("------------------------------------------");
-			}
-			
+				
+				check = 0;
+				System.out.println("------------------------------------------");
+				System.out.println("Данные введены не правильно. Введите снова");
+				System.out.println("------------------------------------------");
+				}
+				
 			System.out.println("----------------------------------");
 			
 		} while ( check == 0 );
-			return x;
+		
+	return x;
+	
 	}
 	
 	
@@ -53,17 +54,20 @@ public class Task_3_1_res {
 	
 	
 	// Вывод на печать одномерного массива
-	public void PrintMass (int[] array) {
+	public static void PrintMass (int[] array) {
 		
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		
 		for ( int i = 0; i < array.length; i++) {
 			
 			System.out.printf( "%4d ", array[i] );
+			
 			System.out.printf( "(%d) ", i);
 			
 			}
 			
 		System.out.println("");
+		
 		System.out.println("--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 	}
 	
