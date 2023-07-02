@@ -32,9 +32,9 @@ public class Task_2_7_res {
 						
 					System.out.println("----------------------------------");
 					
-					} while ( check == 0 );
-					
-				return x;
+				} while ( check == 0 );
+				
+			return x;
 		}
 		
 		
