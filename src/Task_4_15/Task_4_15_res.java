@@ -32,8 +32,8 @@ public class Task_4_15_res {
 					System.out.println("------------------------------------------");
 					}
 					
-			System.out.println("--------------------------------------");
-				
+					System.out.println("--------------------------------------");
+					
 				} while ( check == 0 );
 				
 			return x;

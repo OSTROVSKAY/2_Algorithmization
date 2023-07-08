@@ -22,7 +22,7 @@ public class Task_1_2_res {
 		try {
 			x = Integer.parseInt(xx);
 			}
-				catch (NumberFormatException e) {
+			catch (NumberFormatException e) {
 					
 					check = 0;
 					System.out.println("------------------------------------------");
